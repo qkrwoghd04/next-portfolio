@@ -8,13 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        light: "var(--background)",
-        dark: "var(--background)",
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+        fadeInRight: 'fadeInRight 1s ease-in-out',
       },
-      textColor: {
-        light: "var(--foreground)",
-        dark: "var(--foreground)",
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
       },
     },
   },

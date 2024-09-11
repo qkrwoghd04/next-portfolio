@@ -1,24 +1,42 @@
 "use client"
 
+import { useState, useEffect } from 'react';
 import Link from "next/link"
 import DarkModeToggleButton from "./dark-mode-toggle-button";
 
 export default function Header() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="text-gray-600 body-font">
+    <header className={`
+      ${isSticky ? 'fixed top-0 left-0 right-0 shadow-md bg-white dark:bg-gray-800' : 'absolute top-0 left-0 right-0 bg-transparent'}
+      transition-all duration-300 ease-in-out z-50
+    `}>
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-          </svg>
-          <span className="ml-3 text-xl">재홍&apos;s Portfolio</span>
+        <Link href="/" className="flex title-font font-medium items-center mb-4 md:mb-0">
+          <span className="ml-3 text-xl">How Is Jaehong Park</span>
         </Link>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link href="/" className="mr-5 hover:text-gray-900">Home</Link>
-          <Link href="/projects" className="mr-5 hover:text-gray-900">Projects</Link>
-          <Link href="/contacts" className="mr-5 hover:text-gray-900">Contacts</Link>
+          <Link href="/" className="mr-5 hover:text-gray-900 dark:hover:text-gray-100">Home</Link>
+          <Link href="/projects" className="mr-5 hover:text-gray-900 dark:hover:text-gray-100">Projects</Link>
+          <Link href="/contacts" className="mr-5 hover:text-gray-900 dark:hover:text-gray-100">Contacts</Link>
         </nav>
-        {/* Dark Mode Toggle*/}
         <DarkModeToggleButton />
       </div>
     </header>
