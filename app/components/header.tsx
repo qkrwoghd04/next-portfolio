@@ -1,6 +1,6 @@
-'use client'
-import Link from 'next/link'
-import DarkModeToggleButton from './dark-mode-toggle-button';
+"use client"
+import Link from "next/link"
+import DarkModeToggleButton from "./dark-mode-toggle-button";
 
 export default function Header() {
   return (

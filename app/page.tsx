@@ -1,5 +1,4 @@
-import { Metadata } from 'next'
-import Image from "next/image";
+import { Metadata } from "next"
 import SomeReusableLayout from "./components/SomeReusableLayout";
 import Hero from "./components/home/hero"
 
