@@ -8,12 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundColor: {
+        light: "var(--background)",
+        dark: "var(--background)",
+      },
+      textColor: {
+        light: "var(--foreground)",
+        dark: "var(--foreground)",
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 };
+
 export default config;

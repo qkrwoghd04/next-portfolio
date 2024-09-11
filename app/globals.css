@@ -7,12 +7,105 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@layer base {
+  body {
+    @apply text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900 transition-colors duration-300;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white font-bold;
+  }
+
+  a {
+    @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-300;
+  }
+
+  p {
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed;
   }
 }
+
+@layer components {
+  .btn-project {
+    @apply inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .project-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition duration-300 transform 
+    border border-gray-200 dark:border-gray-700
+    hover:scale-105 hover:shadow-xl
+    dark:hover:shadow-gray-700/40;
+  }
+
+  .bg-primary {
+    @apply bg-white dark:bg-gray-800 transition-colors duration-300;
+  }
+}
+
+footer {
+  @apply text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800/50 transition-colors duration-300;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.btn-project {
+  @apply inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg
+}
+
+.project-card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden items-center justify-center transition duration-300 transform 
+  border border-gray-300 
+  hover:scale-105 
+  hover:shadow-lg 
+  dark:border-gray-500
+  dark:hover:shadow-gray-400/40
+  dark:text-gray-800
+}
+
+.bg-primary {
+  @apply bg-white dark:bg-slate-700
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-slate-900 dark:text-white
+}
+
+footer {
+  @apply text-slate-600 dark:text-white
+  bg-gray-100 dark:bg-slate-600/20
+
+}
+
+a {
+  @apply text-slate-500 hover:text-slate-700 dark:text-slate-300
+}
+
+p {
+  @apply text-slate-500 dark:text-slate-400
+}
+
+
+
 
 body {
   color: var(--foreground);
