@@ -50,7 +50,7 @@ export default async function Project() {
   const projectData = await getProjectData();
 
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 min-h-screen py-12">
+    <div className="bg-gray-100 dark:bg-gray-900 min-h-screen py-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-12 text-center text-gray-800 dark:text-white">
           My Projects
@@ -89,7 +89,7 @@ export default async function Project() {
                   href={project.gitLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-300"
+                  className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-300"
                 >
                   View on GitHub
                 </a>
