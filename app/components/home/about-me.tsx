@@ -56,7 +56,7 @@ export default function AboutMe() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-gray-800 dark:text-gray-200">
               <p><span className="font-semibold text-gray-900 dark:text-white">이름:</span> 박재홍</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">나이:</span> 26세</p>
-              <p><span className="font-semibold text-gray-900 dark:text-white">학력:</span> Xi'an Jiaotong Liverpool University (XJTLU)</p>
+              <p><span className="font-semibold text-gray-900 dark:text-white">학력:</span> Xi&apos;an Jiaotong Liverpool University (XJTLU)</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">전공:</span> Information and Computing Science</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">GPA:</span> 3.525/4.0</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">자격증:</span> AWS Certified Cloud Practitioner (CLF-C02)</p>
