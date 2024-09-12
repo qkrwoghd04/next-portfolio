@@ -72,7 +72,7 @@ export default function AboutMe() {
             
             <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">주요 성과 및 학습 목표</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
-              <li>2023년 8월 21일: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
+              <li>2024년 8월 21일: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
               <li>현재 진행 중: 실제 프로젝트 참여를 통한 다양한 Use Case 학습 및 실무 경험 축적</li>
             </ul>
             <p className="text-lg font-medium mt-6 text-gray-900 dark:text-white">앞으로도 클라우드 및 DevOps 분야에서의 지속적인 성장을 위해 노력하겠습니다</p>
