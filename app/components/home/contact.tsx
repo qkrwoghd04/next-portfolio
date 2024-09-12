@@ -41,7 +41,7 @@ export default function Contact() {
       }`}
     >
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">CONTACT ME</h2>
+        <h2 className="text-4xl font-bold mb-16 text-center text-gray-900 dark:text-white">CONTACT ME</h2>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">

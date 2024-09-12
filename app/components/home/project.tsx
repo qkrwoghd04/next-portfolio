@@ -54,7 +54,7 @@ export default async function Project() {
       <div className="bg-gray-100 dark:bg-gray-900 min-h-screen py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-12 text-center text-gray-800 dark:text-white">
-            My Projects
+            MY PROJECTS
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectData.map((project, index) => (
