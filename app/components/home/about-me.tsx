@@ -34,12 +34,13 @@ export default function AboutMe() {
 
   return (
     <section
+      id="aboutMe"
       ref={aboutRef}
       className={`py-20 bg-gray-100 dark:bg-gray-900 transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
         }`}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">About Me</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">ABOUT ME</h2>
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">

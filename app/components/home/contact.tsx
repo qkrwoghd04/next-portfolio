@@ -34,13 +34,14 @@ export default function Contact() {
 
   return (
     <section
+      id="contacts"
       ref={contactRef}
       className={`py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-all duration-1000 ease-in-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">Contact Me</h2>
+        <h2 className="text-5xl font-bold mb-16 text-center text-gray-900 dark:text-white">CONTACT ME</h2>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-12 md:mb-0">
             <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
