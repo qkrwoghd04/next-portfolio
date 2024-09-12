@@ -24,6 +24,16 @@
   --foreground: #ededed;
 }
 
+@layer components {
+  .hero-text {
+    @apply text-gray-300;
+  }
+
+  .hero-title {
+    @apply text-blue-500 dark:text-blue-300;
+  }
+}
+
 @layer base {
   body {
     @apply text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900 transition-colors duration-300;
