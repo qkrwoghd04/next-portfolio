@@ -64,7 +64,7 @@ export default function TechStack() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 text-center">WHAT HAVE U WORKED WITH</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center">WHAT HAVE I WORKED WITH</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {techStack.map((tech, index) => (
             <div key={index} className="flex flex-col items-center">
