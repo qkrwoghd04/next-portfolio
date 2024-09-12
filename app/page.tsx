@@ -3,10 +3,12 @@ import SomeReusableLayout from "./components/SomeReusableLayout";
 import Hero from "./components/home/hero"
 import AboutMe from "./components/home/about-me"
 import backgroundImage from './backgroud.jpg'
+import TechStack from "./components/home/techStack"
+import Project from "./components/home/project"
 
 export const metadata: Metadata = {
-  title: '재홍의 포트폴리오',
-  description: '오늘도 화이팅!',
+  title: "재홍의 포트폴리오",
+  description: "오늘도 화이팅!",
 }
 
 export default function Home() {
@@ -22,6 +24,8 @@ export default function Home() {
         </div>
       </section>
       <AboutMe />
+      <TechStack />
+      <Project />
     </SomeReusableLayout>
   );
 }
