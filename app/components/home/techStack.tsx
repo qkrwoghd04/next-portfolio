@@ -58,7 +58,7 @@ export default function TechStack() {
   return (
     <section
       ref={techRef}
-      className={`py-20 bg-white dark:bg-gray-900 transition-opacity duration-1000 ease-in-out ${
+      className={`py-20 bg-white dark:bg-gray-800 transition-opacity duration-1000 ease-in-out ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >

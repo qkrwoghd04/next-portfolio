@@ -35,7 +35,7 @@ export default function AboutMe() {
   return (
     <section
       ref={aboutRef}
-      className={`py-20 bg-gray-100 dark:bg-gray-800 transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
+      className={`py-20 bg-gray-100 dark:bg-gray-900 transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'
         }`}
     >
       <div className="container mx-auto px-4">

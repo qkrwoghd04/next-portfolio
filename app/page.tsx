@@ -5,10 +5,11 @@ import AboutMe from "./components/home/about-me"
 import backgroundImage from './backgroud.jpg'
 import TechStack from "./components/home/techStack"
 import Project from "./components/home/project"
+import Contact from './components/home/contact';
 
 export const metadata: Metadata = {
   title: "재홍의 포트폴리오",
-  description: "오늘도 화이팅!",
+  description: "오늘도 화이팅!"
 }
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <AboutMe />
       <TechStack />
       <Project />
+      <Contact />
     </SomeReusableLayout>
   );
 }
