@@ -22,16 +22,6 @@ export default function Hero() {
         사용자 경험을 향상시키고 기술의 경계를 넓히는 것이 저의 목표입니다.
       </p>
       <div className="flex flex-col sm:flex-row justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-        <Link href="/projects" className="inline-block text-center">
-          <button className="btn-project px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg rounded-full transition-all duration-300 ease-in-out 
-                             bg-blue-600 hover:bg-blue-700 text-white 
-                             dark:bg-blue-500 dark:hover:bg-blue-600
-                             shadow-md hover:shadow-lg 
-                             transform hover:-translate-y-0.5 hover:scale-105
-                             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-            Projects
-          </button>
-        </Link>
       </div>
     </div>
   );
