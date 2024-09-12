@@ -63,20 +63,22 @@ export default function AboutMe() {
               <p><span className="font-semibold text-gray-900 dark:text-white">자격증:</span> AWS Certified Cloud Practitioner (CLF-C02)</p>
             </div>
             
-            <p className="text-lg text-gray-800 dark:text-gray-200">현재 저는 기업들의 디지털 전환 추세에 주목하고 있습니다. 특히 다음과 같은 영역에 깊은 관심을 두고 있습니다:</p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+            <hr className="border-t border-gray-300 dark:border-gray-700 my-6" />
+            <p className="text-l font-bold text-gray-800 dark:text-gray-200">현재 저는 기업들의 디지털 전환 추세에 주목하고 있습니다. 특히 다음과 같은 영역에 깊은 관심을 두고 있습니다:</p>
+            <ul className="list-disc pl-6 space-y-2 text-gray-900 dark:text-gray-300">
               <li>온프레미스에서 클라우드로의 마이그레이션</li>
               <li>하이브리드 클라우드 아키텍처 구축</li>
               <li>Docker와 Jenkins를 활용한 자동화 프로세스 구현</li>
             </ul>
-            <p className="text-lg text-gray-800 dark:text-gray-200">이러한 업계 동향에 발맞추어, 저는 AWS 클라우드 서비스와 Docker & Kubernetes 기술 스택에 집중하여 전문성을 키워나가고 있습니다</p>
+            <p className="text-l font-bold text-gray-800 dark:text-gray-200">이러한 업계 동향에 발맞추어, 저는 AWS 클라우드 서비스와 Docker & Kubernetes 기술 스택에 집중하여 전문성을 키워나가고 있습니다</p>
             
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">주요 성과 및 학습 목표</h3>
+            <hr className="border-t border-gray-300 dark:border-gray-700 my-6" />
+            <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">주요 성과 및 학습 목표</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
               <li>2024년 8월 21일: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
               <li>현재 진행 중: 실제 프로젝트 참여를 통한 다양한 Use Case 학습 및 실무 경험 축적</li>
             </ul>
-            <p className="text-lg font-medium mt-6 text-gray-900 dark:text-white">앞으로도 클라우드 및 DevOps 분야에서의 지속적인 성장을 위해 노력하겠습니다</p>
+            <p className="text-l font-semibold mt-6 text-gray-900 dark:text-white">클라우드 및 DevOps 분야에서의 지속적인 성장을 위해 지금도 노력하고 있습니다</p>
           </div>
         </div>
       </div>

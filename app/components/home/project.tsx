@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 function formatDate(dateString: string | null): string {
   if (!dateString) return '';
   const date = new Date(dateString);
-  return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long' });
+  return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
 function getWorkPeriod(startDate: string | null, endDate: string | null): string {
@@ -90,9 +90,9 @@ export default async function Project() {
                     href={project.gitLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors duration-300"
+                    className="inline-block bg-sky-900 text-white py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition-colors duration-300"
                   >
-                    View on GitHub
+                    GitHub
                   </a>
                 </div>
               </div>

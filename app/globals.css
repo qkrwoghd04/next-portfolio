@@ -18,7 +18,7 @@
   }
 
   .hero-title {
-    @apply text-blue-500 dark:text-blue-300;
+    @apply text-cyan-600;
   }
 }
 
@@ -101,9 +101,6 @@ a {
 p {
   @apply text-slate-500 dark:text-slate-400
 }
-
-
-
 
 body {
   color: var(--foreground);
