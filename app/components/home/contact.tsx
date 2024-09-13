@@ -36,7 +36,7 @@ export default function Contact() {
     <section
       id="contacts"
       ref={contactRef}
-      className={`py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-all duration-1000 ease-in-out ${
+      className={`py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 transition-all duration-1000 ease-in-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
