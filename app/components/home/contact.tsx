@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import profileImage from './profile2.jpg'
 
 export default function Contact() {
+  const profileImage = '/images/profile2.jpg'
   const [isVisible, setIsVisible] = useState(false);
   const contactRef = useRef(null);
 

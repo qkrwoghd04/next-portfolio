@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "./components/theme-provider" //For Dark Mode
+import { ThemeProvider } from "./components/providers/themeProvider" //For Dark Mode
 
 export const metadata: Metadata = {
   title: "Create Next App",

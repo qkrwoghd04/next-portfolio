@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link"
-import DarkModeToggleButton from "./dark-mode-toggle-button";
+import DarkModeToggleButton from "../ui/dark-mode-toggle-button";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);

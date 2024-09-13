@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import profileImage from './profile.jpg'
 
 export default function AboutMe() {
+  
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
 
@@ -45,7 +45,7 @@ export default function AboutMe() {
           <div className="lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <Image
-                src={profileImage}
+                src="/images/profile.jpg"
                 alt="박재홍의 프로필 사진"
                 fill
                 style={{ objectFit: "cover" }}

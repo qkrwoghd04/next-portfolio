@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { TOKEN, DATABASE_ID } from "../../../config/index"
-import { NotionPage, NotionResponse } from "./types";
+import { NotionPage, NotionResponse } from "../../utils/types/notion";
 import Image from "next/image";
 
 export const metadata: Metadata = {

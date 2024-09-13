@@ -2,29 +2,19 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import awsIcon from "./icon/aws.png";
-import javaIcon from "./icon/java.png";
-import pythonIcon from "./icon/python.png";
-import dockerIcon from "./icon/docker.png";
-import reactIcon from "./icon/react.png";
-import nodejsIcon from "./icon/nodejs.png";
-import tfIcon from "./icon/tensorflow.png";
-import hsIcon from "./icon/html-css.png";
-import myIcon from "./icon/mysql.png";
-import springIcon from "./icon/spring.png";
 
 // 기술 스택 데이터
 const techStack = [
-  { name: 'JAVA', icon: javaIcon },
-  { name: 'PYTHON', icon: pythonIcon },
-  { name: 'Spring', icon: springIcon },
-  { name: 'HTML/CSS', icon: hsIcon },
-  { name: 'MySQL', icon: myIcon },
-  { name: 'React', icon: reactIcon },
-  { name: 'Node.js', icon: nodejsIcon },
-  { name: 'AWS', icon: awsIcon },
-  { name: 'TensorFlow', icon: tfIcon },
-  { name: 'Docker', icon: dockerIcon },
+  { name: 'JAVA', icon: '/images/icon/java.png' },
+  { name: 'PYTHON', icon: '/images/icon/python.png' },
+  { name: 'Spring', icon: '/images/icon/spring.png' },
+  { name: 'HTML/CSS', icon: '/images/icon/html-css.png' },
+  { name: 'MySQL', icon: '/images/icon/mysql.png' },
+  { name: 'React', icon: '/images/icon/react.png' },
+  { name: 'Node.js', icon: '/images/icon/nodejs.png' },
+  { name: 'AWS', icon: '/images/icon/aws.png' },
+  { name: 'TensorFlow', icon: '/images/icon/tensorflow.png' },
+  { name: 'Docker', icon: '/images/icon/docker.png' },
 ];
 
 export default function TechStack() {
@@ -72,8 +62,9 @@ export default function TechStack() {
                 <Image
                   src={tech.icon}
                   alt={`${tech.name} icon`}
-                  layout="fill"
-                  objectFit="contain"
+                  width={80}
+                  height={80}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <p className="text-center font-semibold">{tech.name}</p>
