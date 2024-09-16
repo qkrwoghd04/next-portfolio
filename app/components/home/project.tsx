@@ -92,7 +92,7 @@ export default async function Project() {
                     rel="noopener noreferrer"
                     className="inline-block bg-sky-900 text-white py-2 px-4 rounded hover:bg-blue-600 hover:text-white transition-colors duration-300"
                   >
-                    GitHub
+                    GitHub (Detail Info)
                   </a>
                 </div>
               </div>
