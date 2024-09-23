@@ -75,8 +75,9 @@ export default function AboutMe() {
             <hr className="border-t border-gray-300 dark:border-gray-700 my-6" />
             <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">주요 성과 및 학습 목표</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
-              <li>2024년 8월 21일: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
-              <li>현재 진행 중: 실제 프로젝트 참여를 통한 다양한 Use Case 학습 및 실무 경험 축적</li>
+              <li><strong>2024년 7월 15일 ~ 2024년 8월 21일</strong>: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
+              <li><strong>2024년 8월 26일 ~ 2024년 9월 23일</strong>: expo기반 안드로이드 플랫폼 건강식품 앱 개발, <br></br><strong>FE</strong>: React Native, <strong>BE</strong> : Node.js, <strong>Deploy</strong>: AWS (PlayStore 비공개테스트 중)</li>
+              <li><strong>2024년 9월 23일 ~ 현재 진행 중</strong>: Docker를 통한 Node.js 기반 웹 ECS를 통한 관리 및 배포</li>
             </ul>
             <p className="text-l font-semibold mt-6 text-gray-900 dark:text-white">클라우드 및 DevOps 분야에서의 지속적인 성장을 위해 지금도 노력하고 있습니다</p>
           </div>
