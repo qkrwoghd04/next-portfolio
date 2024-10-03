@@ -59,25 +59,26 @@ export default function AboutMe() {
               <p><span className="font-semibold text-gray-900 dark:text-white">나이:</span> 26세</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">학력:</span> Xi&apos;an Jiaotong Liverpool University (XJTLU)</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">전공:</span> Information and Computing Science</p>
-              <p><span className="font-semibold text-gray-900 dark:text-white">GPA:</span> 3.525/4.0</p>
+              <p><span className="font-semibold text-gray-900 dark:text-white">GPA:</span> 3.494/4.0 (Upper Second Degree)</p>
               <p><span className="font-semibold text-gray-900 dark:text-white">자격증:</span> AWS Certified Cloud Practitioner (CLF-C02)</p>
             </div>
             
             <hr className="border-t border-gray-300 dark:border-gray-700 my-6" />
-            <p className="text-l font-bold text-gray-800 dark:text-gray-200">현재 저는 기업들의 디지털 전환 추세에 주목하고 있습니다. 특히 다음과 같은 영역에 깊은 관심을 두고 있습니다:</p>
+            <p className="text-l font-bold text-gray-800 dark:text-gray-200">현재 저는 기업들의 디지털 전환 추세에 주목하고 있습니다. 특히 다음과 같은 분야에 깊은 관심을 두고 공부하고 있습니다:</p>
             <ul className="list-disc pl-6 space-y-2 text-gray-900 dark:text-gray-300">
-              <li>온프레미스에서 클라우드로의 마이그레이션</li>
-              <li>하이브리드 클라우드 아키텍처 구축</li>
-              <li>Docker와 Jenkins를 활용한 자동화 프로세스 구현</li>
+              <li>다양한 AWS 클라우드 서비스를 활용한 프로젝트 구현</li>
+              <li>Kubernetes와 Jenkins 통한 CICD 자동화 프로세스 구현</li>
+              <li>Node.js와 MongoDB를 컨테이너화하여 ECS에 배포</li>
             </ul>
-            <p className="text-l font-bold text-gray-800 dark:text-gray-200">이러한 업계 동향에 발맞추어, 저는 AWS 클라우드 서비스와 Docker & Kubernetes 기술 스택에 집중하여 전문성을 키워나가고 있습니다</p>
+            <p className="text-l font-bold text-gray-800 dark:text-gray-200">이러한 업계 동향에 맞춰, AWS 클라우드 서비스와 자동화 프로세스 기술 스택을 중심으로 전문성을 키워나가고 있습니다.</p>
+
             
             <hr className="border-t border-gray-300 dark:border-gray-700 my-6" />
             <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">주요 성과 및 학습 목표</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200">
-              <li><strong>2024년 7월 15일 ~ 2024년 8월 21일</strong>: AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
-              <li><strong>2024년 8월 26일 ~ 2024년 9월 23일</strong>: expo기반 안드로이드 플랫폼 건강식품 앱 개발, <br></br><strong>FE</strong>: React Native, <strong>BE</strong> : Node.js, <strong>Deploy</strong>: AWS (PlayStore 비공개테스트 중)</li>
-              <li><strong>2024년 9월 23일 ~ 현재 진행 중</strong>: Docker를 통한 Node.js 기반 웹 ECS를 통한 관리 및 배포</li>
+              <li><strong>2024년 7월 15일 ~ 2024년 8월 21일</strong>: <br></br>AWS Certified Cloud Practitioner (CLF-C02) 자격증 취득</li>
+              <li><strong>2024년 8월 26일 ~ 2024년 9월 23일</strong>: <br></br>Expo기반 안드로이드 플랫폼 건강식품 앱 개발 <br></br><strong>FE</strong>: React Native, <strong>BE</strong> : Node.js, <strong>Deploy</strong>: AWS Services(PlayStore 비공개테스트 중)</li>
+              <li><strong>2024년 9월 23일 ~ 현재 진행 중</strong>: <br></br>Docker를 통한 Node.js 기반 웹 ECS를 통한 관리 및 배포</li>
             </ul>
             <p className="text-l font-semibold mt-6 text-gray-900 dark:text-white">클라우드 및 DevOps 분야에서의 지속적인 성장을 위해 지금도 노력하고 있습니다</p>
           </div>

@@ -19,7 +19,7 @@ function getWorkPeriod(startDate: string | null, endDate: string | null): string
   return `${start} - ${end}`;
 }
 
-export const revalidate = 0
+export const revalidate = 0 //캐싱 없이 모든 요청마다 실시간으로 새로운 데이터 가져옴
 
 async function getProjectData() {
   const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, {
