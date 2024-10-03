@@ -11,13 +11,14 @@
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "dotenv": "^16.4.5",
-    "next": "14.2.8",
+    "next": "^14.2.14",
     "next-themes": "^0.3.0",
     "notion-client": "^6.16.0",
     "portfolio": "file:",
     "react": "^18",
     "react-dom": "^18",
-    "react-lottie-player": "^2.1.0"
+    "react-lottie-player": "^2.1.0",
+    "vercel": "^32.3.0"
   },
   "devDependencies": {
     "@types/node": "^20",
