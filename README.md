@@ -16,6 +16,8 @@ React 기반의 Next.js 프레임워크를 사용하여 현대적이고 반응�
 ---
 
 ## 🚀 환경 구축
+![portfolio](https://github.com/user-attachments/assets/ab4bb084-7adb-42d7-a902-4dd1a5b12703)
+
 
 ### 1. 유튜브 포트폴리오 구축 강의 참고
 - [개발하는 정대리 YouTube 강의](https://www.youtube.com/watch?v=KvoFvmu5eRo&t=643s)
