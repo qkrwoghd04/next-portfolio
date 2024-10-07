@@ -1,7 +1,7 @@
 # Next.js와 Notion API를 활용한 동적 포트폴리오 웹사이트
 
 ## 📅 프로젝트 기간
-2024-09-07 ~ 2024-09-12
+2024-09-07 ~
 
 ## 🛠 기술 스택
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
