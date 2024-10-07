@@ -7,8 +7,8 @@ import Project from "../components/home/project"
 import Contact from '../components/home/contact';
 
 export const metadata: Metadata = {
-  title: "재홍의 포트폴리오",
-  description: "오늘도 화이팅!"
+  title: "WHOIS JAEHONGPARK",
+  description: "Thank you for visiting"
 }
 
 export default function Home() {

@@ -9,8 +9,8 @@ interface SomeReusableLayoutProps {
 }
 
 const SomeReusableLayout: React.FC<SomeReusableLayoutProps> = ({
-  children,
   showHeader = true,
+  children,
   showFooter = true
 }) => {
   return (
