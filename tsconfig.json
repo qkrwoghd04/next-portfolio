@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/PageTransition.jsx", "components/Stairs.jsx", "components/Social.jsx", "components/Photo.jsx", "app/work/page.jsx", "components/WorkSliderBtns.jsx", "app/work/page.jsx"],
   "exclude": ["node_modules"]
 }
