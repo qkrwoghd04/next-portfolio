@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Roboto, Noto_Sans_KR } from "next/font/google"; 
+import { Noto_Sans_KR } from "next/font/google"; 
 
 // component
 import Header from "@/components/Header"
