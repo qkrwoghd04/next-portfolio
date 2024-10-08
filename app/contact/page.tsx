@@ -42,27 +42,38 @@ const Contact = () => {
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
-              <p className="text-white/60">I am open to work with u guys, please contact me as soon as possible
+              <h3 className="text-4xl text-accent">피드백</h3>
+              <p className="text-white/60">JAEHONG PARK . 에 대한 피드백 주시면 감사하겠습니다
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email" />
-                <Input type="phone" placeholder="Phone number" />
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="성별" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>성별</SelectLabel>
+                      <SelectItem value="man">남</SelectItem>
+                      <SelectItem value="woman">여</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <Input type="분야" placeholder="분야 ex) UX/UI Designer" />
               </div>
               {/* select */}
               <Select>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="JAEHONG PAKR . 평가" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Web Development</SelectItem>
+                    <SelectLabel>평가</SelectLabel>
+                    <SelectItem value="one">1</SelectItem>
+                    <SelectItem value="two">2</SelectItem>
+                    <SelectItem value="three">3</SelectItem>
+                    <SelectItem value="four">4</SelectItem>
+                    <SelectItem value="five">5</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

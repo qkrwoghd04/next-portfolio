@@ -1,16 +1,18 @@
 import "./globals.css";
-import { Noto_Sans_KR } from 'next/font/google';
+import { Roboto, Noto_Sans_KR } from "next/font/google"; 
 
 // component
 import Header from "@/components/Header"
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
-const NotoSansKR = Noto_Sans_KR({ 
-  subsets: ["latin"], 
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: '--font-Noto_Sans_KR'
+const notoSansKr = Noto_Sans_KR({
+  // preload: true, 기본값
+  subsets: ["latin"], // 또는 preload: false
+  weight: ["100", "400", "700", "900"],
+  variable: "--noto_sans_kr"
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -23,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`{$NotoSansKR.variable}`}>
-      <body className={NotoSansKR.variable}>
+    <html lang="ko" className={`${notoSansKr.variable}`}>
+      <body className={notoSansKr.variable}>
           <Header />
           <StairTransition />
           <PageTransition> 

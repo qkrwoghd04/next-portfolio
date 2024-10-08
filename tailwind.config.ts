@@ -19,7 +19,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      primary: 'var(--font-Noto_Sans_KR)'
+      primary: 'var(--noto_sans_kr)'
     },
     extend: {
       colors: {

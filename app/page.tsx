@@ -12,10 +12,11 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Cloud/DevOps LEARNER</span>
-            <h1 className="h1 mb-6">WHO IS<br /> <span className="text-accent">JAEHONG PARK</span>
+            <span className="text-2xl">Cloud/DevOps LEARNER</span>
+            <h1 className="h1 mb-6">
+              JAEHONG PARK
             </h1>
-            <p className="max-w-[500px] mb-9 text-whit/80">지속적인 새로운 기술과 다양한 분야의 대한 배움을 빠르게 습득하며, 하나의 프로젝트에서 다양한 기술/프레임워크와 CICD 파이프라인 구축을 통해 최적의 방법을 모색합니다. <br /><br />다양한 IT포럼 및 온라인/오프라인 강연에 참석하며 배움을 쌓고 있습니다. 성실하고 뚝심 있는 인재를 찾으신다면, 연락주시면 감사하겠습니다
+            <p className="max-w-[500px] mb-9 text-white/80 text-xl">이곳은 저의 <b className="text-white">인생</b>을 쌓아가는 공간입니다. <br />저는 중국에서 영국계 대학을 졸업하고, <br />DevOps 엔지니어로서의 꿈을 키우고 있습니다<br /><br />현재 다양한 IT포럼 및 온라인/오프라인 강연에 참석하며 배움을 쌓고 있습니다. <b className="text-white">성실하고 뚝심 있는 인재를 찾으신다면,</b> 연락주시면 감사하겠습니다
             </p>
             {/*  btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -23,10 +24,10 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2">
-                <a href="https://d3c3zgrht7r4md.cloudfront.net/">Download CV</a>
+                <a href="https://d3c3zgrht7r4md.cloudfront.net/">View CV</a>
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent
+                <Social containerStyles="flex gap-6" iconStyles="w-12 h-12 border border-accent
                 rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
               </div>

@@ -16,8 +16,8 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
 
 // about data
 const about = {
-  title: "About Me",
-  description: "저는 토끼와 거북이의 경주 이야기를 좋아합니다. 때로는 배움이 빠를 수도, 느릴 수도 있지만, 저라는 사람은 묵묵히 저의 목표를 향해 나아가는 것 같습니다. 또한 저는 ",
+  title: "나에 대하여",
+  description: "묵묵하면서 유연한 사람을 찾고 계신가요?\n혹은 단조롭지만 특색있는 사람은 어떠신가요?\n거짓말이라고 느끼실 수 있지만, 전 상반된 각각의 특징들을 모두 가지고 있는 사람입니다. 어디서는 일할 준비가 되어 있고, 편하게 연락주시면 감사하겠습니다",
   info: [
     {
       fieldName: "Name",
@@ -26,14 +26,6 @@ const about = {
     {
       fieldName: "Nationality",
       fieldValue: "Republic of Korea"
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+82) 010 3360 4104"
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "qkrwoghd04@naver.com"
     },
     {
       fieldName: "Age",
@@ -55,20 +47,24 @@ const about = {
       fieldName: "Language",
       fieldValue: "Korean, English, Chinese"
     },
+    {
+      fieldName: "Spacialty",
+      fieldValue: "Node.js, React, AWS"
+    },
   ]
 };
 
 // experience data
 const experience = {
   icon: '/asset/resume/badge.svg',
-  title: "My experience",
+  title: "경력",
   description:
-    "This is my experience after graduation",
+    "현재 다양한 직무와 인턴 경험 자리를 찾고 있습니다",
   items: [
     {
-      company: "Freelancer",
+      company: "프리랜서",
       position: "Full Stack Developer",
-      duration: "2024.08 - Present",
+      duration: "2024.08 - ",
     },
   ]
 };
@@ -76,23 +72,23 @@ const experience = {
 // education data
 const education = {
   icon: '/asset/resume/cap.svg',
-  title: "My education",
+  title: "교육",
   description:
-    "This is my education detail",
+    "고등학교, 학사 및 졸업 후 수강한 교육 내용입니다",
   items: [
     {
       institution: "Udemy Platform",
-      degree: "Cloud Practitioner",
-      duration: "2024.07 - 2024-08",
+      degree: "Cloud Practitioner Certification 취득",
+      duration: "2024.07 - 2024-08-21",
     },
     {
       institution: "Xian-Jiaotong Liverpool University",
-      degree: "bachelor's degree",
-      duration: "2017.08 - 2024-08",
+      degree: "Infomation & Computing Science 학사",
+      duration: "2017.08 - 2024-08-02",
     },
     {
       institution: "China Hongkong English School",
-      degree: "high school student",
+      degree: "국제 고등학교 재학",
       duration: "2014.08 - 2017.06",
     },
   ]
@@ -100,9 +96,9 @@ const education = {
 
 // skills data
 const skills = {
-  title: "My skills",
+  title: "기술 스택",
   description:
-    "This is my skills detail",
+    "사용할 줄 아는 혹은 사용해본 기술 스택입니다",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -168,33 +164,33 @@ const Resume = () => {
           ease: "easeIn",
         },
       }}
-      className="min-h-[80vh], flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs
           defaultValue="about"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 justify-center">
-            <TabsTrigger value="about">About Me</TabsTrigger>
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="about">나에 대하여</TabsTrigger>
+            <TabsTrigger value="experience">경력</TabsTrigger>
+            <TabsTrigger value="education">교육</TabsTrigger>
+            <TabsTrigger value="skills">기술 스택</TabsTrigger>
           </TabsList>
 
           {/* content */}
           <div className="min-h-[70vh] w-full">
             {/* about */}
             <TabsContent value="about" className="w-full text-center xl:text-left items-center">
-              <div className="flex flex-col gap-[30px]">
+              <div className="whitespace-pre-wrap flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/80 mx-auto xl:mx-0 border-double border-8 border-accent p-4">
+                <p className="max-w-[600px] text-white/80 mx-auto xl:mx-0 border-double border-8 border-accent p-4 justify-center">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4"
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4 border-b border-white/20 hover:border-white transition-colors duration-300"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-l">{item.fieldValue}</span>
