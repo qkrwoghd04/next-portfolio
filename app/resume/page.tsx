@@ -154,7 +154,6 @@ const skills = {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import AboutInfo from "@/components/AboutInfo.jsx"
 import { motion } from "framer-motion"
 
 const Resume = () => {
@@ -186,13 +185,23 @@ const Resume = () => {
           {/* content */}
           <div className="min-h-[70vh] w-full">
             {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left">
+            <TabsContent value="about" className="w-full text-center xl:text-left items-center">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
                 <p className="max-w-[600px] text-white/80 mx-auto xl:mx-0 border-double border-8 border-accent p-4">
                   {about.description}
                 </p>
-                <AboutInfo about={about} />
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-l">{item.fieldValue}</span>
+                      </li>
+                    )
+                  })}
+                </ul>
               </div>
             </TabsContent>
             {/* experience */}
