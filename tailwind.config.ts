@@ -33,7 +33,7 @@ const config: Config = {
         typing: {
           "0%": {
             width: "0%",
-            visibility: "hidden"
+            visibility: "hidden",
           },
           "100%": {
             width: "100%"
@@ -59,7 +59,7 @@ const config: Config = {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         fadeInRight: 'fadeInRight 1s ease-in-out',
-        typing: "typing 3s steps(30) 3s, blink .7s infinite"
+        typing: "typing 3s steps(30) 1.5s, blink .7s infinite"
       },
       
     }

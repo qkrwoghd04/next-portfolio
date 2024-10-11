@@ -60,7 +60,7 @@ function TypoAnimation() {
             scrollTrigger: {
               trigger: word,
               start: 'top bottom',
-              end: 'top center-=30',
+              end: 'top center-=150',
               scrub: true
             }
           })
@@ -81,14 +81,14 @@ function TypoAnimation() {
     <div className='h-full w-full'>
       <div className='w-full h-[100vh] flex flex-col justify-center items-center'>
         <div className='flex flex-col w-screen relative px-8 py-10 z-20'>
-          <h2 className='content_title text-[8vw] leading-[0.8] text-center grid gap-8'>
+          <h2 className='content_title text-6xl 2xl:text-[6vw] leading-[0.8] text-center grid gap-8'>
             <span className='uppercase target'>constant</span>
             <span className='uppercase target'>challenge</span>
           </h2>
         </div>
 
         <div className='flex flex-col w-screen relative px-8 py-6'>
-          <p className="text-center max-w-[580px] mx-[auto] my-6 text-white/80 text-[1.25rem] leading-normal">
+          <p className="text-center max-w-[580px] mx-[auto] my-4 text-white text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
             <b className='text-white'>&apos;끊임없는 도전&apos;</b> <br /><br />
             새롭게 생겨나는 기술과 프레임워크,<br />
             빠르게 변화하는 인프라와 프로세스,<br />

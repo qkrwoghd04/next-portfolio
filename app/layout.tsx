@@ -28,7 +28,7 @@ export default function RootLayout({
   connectToMongoDB();
   return (
     <html lang="ko" className={`${notoSansKr.variable}`}>
-      <body className={`${notoSansKr.variable} h-screen w-screen`}>
+      <body className={`${notoSansKr.variable}`}>
           <Header />
           <StairTransition />
           <PageTransition> 

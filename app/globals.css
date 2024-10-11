@@ -22,6 +22,9 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #ACA7A6;
   }
+  ::-webkit-scrollbar {
+    display: none
+  }
 }
 
 .text-accent {

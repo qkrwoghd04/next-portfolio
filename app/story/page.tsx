@@ -1,5 +1,6 @@
 "use client";
 
+
 // const services = [
 //   {
 //     num: '01',
@@ -30,7 +31,8 @@
 
 const MyStroy = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <section>
+  
     </section>
   )
 }
