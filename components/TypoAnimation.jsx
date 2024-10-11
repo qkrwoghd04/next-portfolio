@@ -17,7 +17,7 @@ function TypoAnimation() {
 
     const initSmooth = () => {
       lenis = new Lenis({
-        lerp: 0.05,
+        lerp: 0.025,
         smooth: true,
       });
 
@@ -37,7 +37,7 @@ function TypoAnimation() {
 
       for (const word of words) {
         chars.forEach((char) => {
-          gsap.set(char.parentNode, { perspective: 2000 });
+          gsap.set(char.parentNode, { perspective: 3000 });
         });
 
         gsap.fromTo(chars, {
@@ -59,8 +59,8 @@ function TypoAnimation() {
             },
             scrollTrigger: {
               trigger: word,
-              start: 'top+=20 bottom',
-              end: 'top center',
+              start: 'top bottom',
+              end: 'top center-=30',
               scrub: true
             }
           })
@@ -93,9 +93,10 @@ function TypoAnimation() {
             새롭게 생겨나는 기술과 프레임워크,<br />
             빠르게 변화하는 인프라와 프로세스,<br />
             지속적인 적응이 필요한 IT 분야에서는<br />
-            열정만으로는 충분하지 않다고 생각합니다.<br /><br />
-            저는 <b className='text-red-400'>관습</b>에 따라 행동하기를 원하지 않습니다.<br />
-            <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 선택할 줄 아는 사람이 되겠습니다.
+            열정으로는 충분하지 않다고 생각합니다<br /><br />
+            저는 <b className='text-red-400'>관습</b>에 따라 행동하지 않습니다<br />
+            <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 <br />
+            선택할 줄 아는 사람입니다
           </p>
         </div>
       </div>
