@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/PageTransition.jsx", "components/Stairs.jsx", "components/Social.jsx", "components/Photo.jsx", "app/work/page.jsx", "components/WorkSliderBtns.jsx", "app/work/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/PageTransition.jsx", "components/Stairs.jsx", "components/Social.jsx", "components/Photo.tsx", "app/work/page.jsx", "components/WorkSliderBtns.jsx", "app/work/page.jsx", "config/database.js", "app/contact/page.jsx", "app/page.tsx"],
   "exclude": ["node_modules"]
 }

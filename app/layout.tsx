@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Noto_Sans_KR } from "next/font/google"; 
+import { connectToMongoDB } from "@/lib/db";
 
 // component
 import Header from "@/components/Header"
@@ -24,9 +25,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  connectToMongoDB();
   return (
     <html lang="ko" className={`${notoSansKr.variable}`}>
-      <body className={notoSansKr.variable}>
+      <body className={`${notoSansKr.variable} h-screen w-screen`}>
           <Header />
           <StairTransition />
           <PageTransition> 

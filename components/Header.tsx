@@ -9,17 +9,17 @@ import MobileNav from "./MobileNav";
 
 export default function Header() {
   return (
-    <header className="py-8 xl:py-12 text-white">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="w-screen">
+      <div className="py-4 px-4 mx-4 flex justify-between items-center">
         {/* logo */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-2xl font-semibold">
             JAEHONG PARK<span className="text-accent"> .</span>
           </h1>
         </Link>
 
         {/* desktop nav WITH hiring me button*/}
-        <div className="hidden xl:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
             <Button>Hire me</Button>
@@ -27,7 +27,7 @@ export default function Header() {
         </div>
 
         {/*  moblie nav */}
-        <div className="xl:hidden">
+        <div className="lg:hidden">
           <MobileNav />
         </div>
       </div>

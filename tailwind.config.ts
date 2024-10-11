@@ -10,12 +10,12 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: '15px',
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '960px',
-        xl: '1200px'
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
       },
     },
     fontFamily: {
@@ -30,6 +30,23 @@ const config: Config = {
         },
       },
       keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        },
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
@@ -41,12 +58,12 @@ const config: Config = {
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
-        fadeInRight: 'fadeInRight 1s ease-in-out'
+        fadeInRight: 'fadeInRight 1s ease-in-out',
+        typing: "typing 3s steps(30) 3s, blink .7s infinite"
       },
       
     }
   },
-  darkMode: ["class"],
   plugins: [require("tailwindcss-animate")],
 };
 

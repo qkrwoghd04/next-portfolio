@@ -15,14 +15,14 @@ const stairAnimation = {
 
 
 const reverseIndex = (index) => {
-  const totalSteps = 10;
+  const totalSteps = 6;
   return totalSteps - index - 1;
 }
 const Stairs = () => {
   return (
     <>
       {/* 6가지의 divs 모션을 렌더링 한다 */}
-      {[...Array(10)].map((_, index) => {
+      {[...Array(6)].map((_, index) => {
         return (
           <motion.div key={index} variants={stairAnimation} initial="initial"
             animate="animate" exit="exit" transition={{
