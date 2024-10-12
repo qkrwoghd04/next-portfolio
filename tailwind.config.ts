@@ -59,12 +59,11 @@ const config: Config = {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         fadeInRight: 'fadeInRight 1s ease-in-out',
-        typing: "typing 3s steps(30) 1.5s, blink .7s infinite"
+        typing: "typing 4s steps(30) 1.5s, blink .7s infinite"
       },
       
     }
   },
-  plugins: [require("tailwindcss-animate")],
 };
 
 export default config;

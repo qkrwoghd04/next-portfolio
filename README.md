@@ -11,7 +11,7 @@
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
 
 ## 🎯 프로젝트 목적
-React 기반의 Next.js 프레임워크를 사용하여 현대적이고 반응형인 개인 포트폴리오 웹사이트를 구축하고, Vercel을 통해 배포 자동화를 실현합니다.
+React 기반의 Next.js 프레임워크를 사용하여 현대적이고 반응형인 개인 포트폴리오 웹사이트를 구축하고, github Action을 통해 CICD Pipeline을 통해 Vercel에 배포 자동화를 실현합니다.
 
 ---
 
@@ -123,8 +123,11 @@ export default function Header() {
 ---
 
 ## 📚 참고 자료
-- [포트폴리오 예시](https://kim-ji-min.github.io/My-Portfolio/)
-- [개발하는 정대리 YouTube 강의](https://www.youtube.com/watch?v=KvoFvmu5eRo&t=671s)
+- https://tailwindcss.com/docs/
+- https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+- https://www.hostinger.com/tutorials/web-developer-portfolio#1_Charles_Bruyerre
+- https://nextjs.org/docs
+- https://react-icons.github.io/react-icons/icons/ai/
 
 ---
 

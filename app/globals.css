@@ -22,11 +22,21 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #ACA7A6;
   }
-  ::-webkit-scrollbar {
-    display: none
-  }
 }
 
 .text-accent {
   @apply text-[#ACA7A6];
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+img-reveal * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden ;
+}
+
