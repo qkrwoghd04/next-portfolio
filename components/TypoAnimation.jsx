@@ -89,10 +89,9 @@ function TypoAnimation() {
         scrollTrigger: {
           trigger: '.split',
           start: 'top center+=10%',
-          end: 'bottom-=20% center',
+          end: 'bottom center',
           scrub: true,
-          markers: true
-        },
+        },  
       });
     };
 
