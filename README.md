@@ -128,6 +128,7 @@ export default function Header() {
 - https://www.hostinger.com/tutorials/web-developer-portfolio#1_Charles_Bruyerre
 - https://nextjs.org/docs
 - https://react-icons.github.io/react-icons/icons/ai/
+- https://github.com/mattboldt/typed.js
 
 ---
 

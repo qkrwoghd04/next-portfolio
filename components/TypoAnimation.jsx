@@ -89,14 +89,14 @@ function TypoAnimation() {
       </div>
 
       <div className='flex flex-col w-screen relative px-8 py-6'>
-        <p className="text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
-          <b className='text-white'>&apos;끊임없는 도전&apos;</b> <br /><br />
+        <p className="text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[25px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
+          <b className='text-white text-[30px]'>&apos;끊임없는 도전&apos;</b> <br /><br />
           새롭게 생겨나는 기술과 프레임워크,<br />
           빠르게 변화하는 인프라와 프로세스,<br />
           지속적인 적응이 필요한 IT 분야에서는<br />
           열정만으로는 충분하지 않다고 생각합니다<br /><br />
           저는 관습에 따라 행동하지 않습니다<br />
-          스스로의 <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 <br />
+          스스로의 <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 결정하고<br />
           다양한 선택을 할 줄 아는 사람입니다
         </p>
       </div>

@@ -22,7 +22,7 @@ export default function Header() {
 
 
   return (
-    <header className={`${isSticky ? 'fixed w-screen' : 'absolute w-screen transition-all duration-300 ease-in-out z-50'}`}>
+    <header className={`${isSticky ? 'fixed w-screen z-10' : 'absolute w-screen transition-all duration-300 ease-in-out z-50'}`}>
       <div className="py-4 px-4 mx-4 flex justify-between items-center">
         {/* logo */}
         <Link href="/">

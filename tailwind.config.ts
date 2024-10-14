@@ -30,15 +30,15 @@ const config: Config = {
         },
       },
       keyframes: {
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden",
-          },
-          "100%": {
-            width: "100%"
-          }  
-        },
+        // typing: {
+        //   "0%": {
+        //     width: "0%",
+        //     visibility: "hidden",
+        //   },
+        //   "100%": {
+        //     width: "100%"
+        //   }  
+        // },
         blink: {
           "50%": {
             borderColor: "transparent"
@@ -56,11 +56,11 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateX(0)' }
         }
       },
-      animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
-        fadeInRight: 'fadeInRight 1s ease-in-out',
-        typing: "typing 4s steps(30) 1.5s, blink .7s infinite"
-      },
+      // animation: {
+      //   fadeIn: 'fadeIn 1s ease-in-out',
+      //   fadeInRight: 'fadeInRight 1s ease-in-out',
+      //   typing: "typing 4s steps(30) 1.5s, blink .7s infinite"
+      // },
       
     }
   },

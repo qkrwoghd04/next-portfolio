@@ -4,8 +4,7 @@ import { useEffect } from "react";
 // components
 import Hero from '@/components/Hero'
 import TypoAnimation from '@/components/TypoAnimation'
-import ImgReveal from '@/components/ImgReveal'
-import Test from '@/components/Test'
+import ActivityAnimation from '@/components/ActivityAnimation'
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +15,7 @@ const Home = () => {
     <main>
       <Hero />
       <TypoAnimation />
-      <ImgReveal />
+      <ActivityAnimation />
       {/* <Test /> */}
     </main>
   );
