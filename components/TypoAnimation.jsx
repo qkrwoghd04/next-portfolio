@@ -89,7 +89,7 @@ function TypoAnimation() {
       </div>
 
       <div className='flex flex-col w-screen relative px-8 py-6'>
-        <p className="text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[25px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
+        <p className="text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[20px] lg:text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
           <b className='text-white text-[30px]'>&apos;끊임없는 도전&apos;</b> <br /><br />
           새롭게 생겨나는 기술과 프레임워크,<br />
           빠르게 변화하는 인프라와 프로세스,<br />

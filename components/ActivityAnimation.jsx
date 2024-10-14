@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Image from 'next/image'
-import Img1 from '../public/assets/images/1.jpg'
-import Img2 from '../public/assets/images/2.jpg'
-import Img3 from '../public/assets/images/3.jpg'
+import HighSchool from '../public/assets/images/HighSchool.jpg'
+import University from '../public/assets/images/University.jpg'
+import OpenToWork from '../public/assets/images/OpenToWork.jpg'
 import Img4 from '../public/assets/images/4.jpg'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -34,7 +34,7 @@ function ActivityAnimation() {
           },
           scrollTrigger: {
             trigger: item,
-            start: 'top center+=20%',
+            start: 'top center+=25%',
             end: '+=100%',
             scrub: true,
           },
@@ -67,22 +67,21 @@ function ActivityAnimation() {
   return (
     <section className="relative w-full min-h-screen">
       <div className="w-full grid grid-cols-[100%] relative mt-[10vh] mx-auto mb-[40vh] justify-center items-center">
-        <p className="activity w-full text-6xl 2xl:text-[6vw] text-center mb-20">ACTIVITY</p>
+        <p className="activity w-full text-6xl 2xl:text-[6vw] text-center mb-20">TimeLine</p>
         
         {[
-          { src: Img1, caption: "EIFFEL TOWER, PARIS" },
-          { src: Img2, caption: "TAJMAHAL, INDIA" },
-          { src: Img3, caption: "SEOUL KOREA" },
-          { src: Img4, caption: "STONE HENGE, UK" },
+          { src: HighSchool, caption: "China Hongkong English School, Guangdong(广东), 2014-2017" },
+          { src: University, caption: "Xian-Jiaotong Liverpool University, 2017-2024 (3.5/4.0)" },
+          { src: OpenToWork, caption: "Open to work, Korea, Mapo, 2024-" },
         ].map((image, index) => (
           <div className="grid-item relative mb-10" key={index}>
             <div className="grid-item-img relative overflow-hidden grid place-items-center w-full h-auto">
-              <div className="grid-item-caption 2xl:text-6xl text-4xl">{image.caption}</div>
+              <div className="grid-item-caption 2xl:text-6xl text-3xl lg:mb-10 2xl:mb-15">{image.caption}</div>
               <Image 
                 src={image.src}
                 quality={100}
                 alt={image.caption}
-                className="grid-img w-full h-1/2 lg:w-2/3 2xl:w-2/3 lg:h-[500px] 2xl:h-[800px] bg-[100%] bg-cover relative -z-10" 
+                className="grid-img w-full h-3/4 lg:w-2/3 2xl:w-2/3 lg:h-[500px] 2xl:h-[800px] bg-[100%] bg-cover relative -z-10" 
               />
             </div>
           </div>

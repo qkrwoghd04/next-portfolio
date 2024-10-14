@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -30,21 +31,19 @@ const config: Config = {
         },
       },
       keyframes: {
-        // typing: {
-        //   "0%": {
-        //     width: "0%",
-        //     visibility: "hidden",
-        //   },
-        //   "100%": {
-        //     width: "100%"
-        //   }  
-        // },
+        shake: {
+          '0%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-5px)' },
+          '50%': { transform: 'translateX(5px)' },
+          '75%': { transform: 'translateX(-5px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
         blink: {
-          "50%": {
-            borderColor: "transparent"
+          "0%, 100%": {
+            color: "white/5"
           },
-          "100%": {
-            borderColor: "white"
+          "50%": {
+            color: "gray"
           }  
         },
         fadeIn: {
@@ -54,13 +53,19 @@ const config: Config = {
         fadeInRight: {
           '0%': { opacity: '0', transform: 'translateX(20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' }
-        }
+        },
+        pulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' }, 
+        },
       },
-      // animation: {
-      //   fadeIn: 'fadeIn 1s ease-in-out',
-      //   fadeInRight: 'fadeInRight 1s ease-in-out',
-      //   typing: "typing 4s steps(30) 1.5s, blink .7s infinite"
-      // },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+        fadeInRight: 'fadeInRight 1s ease-in-out',
+        typing: "typing 4s steps(30) 1.5s, blink .7s infinite",
+        blink: "blink 3s infinite",
+        pulse: 'pulse 2s infinite 1s', 
+      },
       
     }
   },
