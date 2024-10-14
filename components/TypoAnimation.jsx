@@ -85,11 +85,11 @@ function TypoAnimation() {
       {
         opacity: 1,
         y: 0,
-        stagger: 0.05,
+        stagger: 0.01,
         scrollTrigger: {
           trigger: '.split',
-          start: 'top center+=10%',
-          end: 'bottom center',
+          start: 'top bottom',
+          end: 'bottom-=35% center',
           scrub: true,
         },  
       });
