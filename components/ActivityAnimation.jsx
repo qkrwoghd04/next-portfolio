@@ -1,32 +1,45 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Image from 'next/image'
-import HighSchool from '../public/assets/images/HighSchool.jpg'
-import University from '../public/assets/images/University.jpg'
-import OpenToWork from '../public/assets/images/OpenToWork.jpg'
+import React, { useEffect } from 'react';
+import Image from 'next/image';
+import HighSchool from '../public/assets/images/HighSchool.jpg';
+import University from '../public/assets/images/University.jpg';
+import OpenToWork from '../public/assets/images/OpenToWork.jpg';
 
-import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ActivityAnimation() {
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(()=>{
+  useEffect(() => {
     const gridItem = document.querySelectorAll('.grid-item');
-    
+
     const ScrollAni = () => {
+      // Animate timeline text
       gsap.fromTo(
-        (document.querySelector('.activity')),
-        { opacity:0 },
-        { opacity: 0.8, duration: 2, ease: "elastic" }
-      )
-      gridItem.forEach((item, index)=> {
+        '.timeline',  
+        { scale: 0.5, opacity: 0, y: -50 }, 
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: '.timeline',
+            start: 'top bottom',
+            end: 'top+=50px',
+            scrub: true,
+          },
+        }
+      );
+
+      // Animate timeline items
+      gridItem.forEach((item, index) => {
         console.log(item);
-    
-        const transformOrigin = index % 2 === 0 ? '0% 0%' : '100% 0%'; 
-        const xStart = index % 2 === 0 ? -100 : 100; 
+
+        const transformOrigin = index % 2 === 0 ? '0% 0%' : '100% 0%';
+        const xStart = index % 2 === 0 ? -100 : 100;
 
         gsap.timeline({
           defaults: {
@@ -58,16 +71,18 @@ function ActivityAnimation() {
         );
       });
     };
+
     const init = () => {
       ScrollAni();
-    }
+    };
+
     init();
-  },[]);
-  
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen">
       <div className="w-full grid grid-cols-[100%] relative mt-[10vh] mx-auto mb-[40vh] justify-center items-center">
-        <p className="activity w-full text-6xl 2xl:text-[6vw] text-center mb-20">TimeLine</p>
+        <p className="timeline w-full text-6xl 2xl:text-[6vw] text-center mb-20">TimeLine</p>
         
         {[
           { src: HighSchool, caption: "China Hongkong English School, Guangdong(广东), 2014-2017" },
@@ -88,7 +103,7 @@ function ActivityAnimation() {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default ActivityAnimation
+export default ActivityAnimation;

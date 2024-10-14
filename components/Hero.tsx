@@ -48,7 +48,7 @@ const Hero = () => {
         />
         </div>
         {showArrow && (
-        <div className="flex items-center justify-center absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/5 animate-blink">
+        <div className="flex items-center justify-center absolute bottom-[10%] left-1/2 transform -translate-x-1/2 text-white/5 animate-blink">
           <p className="uppercase">Scroll down</p>
         </div>)}
       </section>

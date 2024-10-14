@@ -1,22 +1,25 @@
-import React from 'react'
-
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 // Scroll Effect
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type'
-import Lenis from '@studio-freight/lenis'
+import SplitType from 'split-type';
+import Lenis from '@studio-freight/lenis';
+import { motion } from 'framer-motion';
 
 function TypoAnimation() {
-
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     let lenis;
 
     const text = new SplitType('.target');
 
+    const splitText = new SplitType('.split', {
+      types: 'words, chars',
+    });
+
+    // scroll setting
     const initSmooth = () => {
       lenis = new Lenis({
         lerp: 0.025,
@@ -26,14 +29,18 @@ function TypoAnimation() {
       lenis.on('scroll', () => ScrollTrigger.update());
 
       const scrollFn = (time) => {
-        lenis.raf(time)
-        requestAnimationFrame(scrollFn)
+        lenis.raf(time);
+        requestAnimationFrame(scrollFn);
       };
 
       requestAnimationFrame(scrollFn);
     };
 
+
+    // Animate when scoll
     const scroll = () => {
+
+      // Animate Constant Challenge Text
       const chars = text.chars;
       const words = text.words;
 
@@ -63,21 +70,38 @@ function TypoAnimation() {
             trigger: word,
             start: 'top bottom',
             end: 'top center-=15%',
-            scrub: true
-          }
-        })
+            scrub: true,
+          },
+        });
       }
-    };
 
+      // Animate the split text in motion.p
+      const splitChars = splitText.chars;
+
+      gsap.fromTo(splitChars, {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: '.split',
+          start: 'top bottom-=10%',
+          end: 'top center',
+          scrub: true,
+        },
+      });
+    };
 
     const init = () => {
       initSmooth();
       scroll();
-    }
+    };
 
     init();
-  })
-
+  }, []); 
 
   return (
     <section className='w-full h-[100vh] flex flex-col justify-center items-center'>
@@ -89,7 +113,7 @@ function TypoAnimation() {
       </div>
 
       <div className='flex flex-col w-screen relative px-8 py-6'>
-        <p className="text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[20px] lg:text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
+        <motion.p initial="hidden" whileInView="reveal" className="split text-center max-w-[580px] mx-[auto] my-4 text-white/60 text-[20px] lg:text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed">
           <b className='text-white text-[30px]'>&apos;끊임없는 도전&apos;</b> <br /><br />
           새롭게 생겨나는 기술과 프레임워크,<br />
           빠르게 변화하는 인프라와 프로세스,<br />
@@ -98,10 +122,10 @@ function TypoAnimation() {
           저는 관습에 따라 행동하지 않습니다<br />
           스스로의 <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 결정하고<br />
           다양한 선택을 할 줄 아는 사람입니다
-        </p>
+        </motion.p>
       </div>
     </section>
-  )
+  );
 }
 
-export default TypoAnimation
+export default TypoAnimation;
