@@ -5,7 +5,7 @@ import Image from 'next/image'
 import HighSchool from '../public/assets/images/HighSchool.jpg'
 import University from '../public/assets/images/University.jpg'
 import OpenToWork from '../public/assets/images/OpenToWork.jpg'
-import Img4 from '../public/assets/images/4.jpg'
+
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useEffect } from 'react';
