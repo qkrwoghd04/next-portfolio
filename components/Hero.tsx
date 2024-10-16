@@ -16,7 +16,7 @@ const Hero = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: type_string,
-      typeSpeed: 100,
+      typeSpeed: 50,
       backSpeed: 50,
       backDelay: 50,
       onComplete: () => {

@@ -28,8 +28,9 @@ function ActivityAnimation() {
           scrollTrigger: {
             trigger: '.timeline',
             start: 'top bottom',
-            end: 'top+=50px',
-            scrub: true,
+            // end: 'top+=50px',
+            // scrub: true,
+            toggleActions: 'play none none none'
           },
         }
       );

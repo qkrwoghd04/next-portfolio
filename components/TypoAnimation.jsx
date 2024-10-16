@@ -69,8 +69,9 @@ function TypoAnimation() {
           scrollTrigger: {
             trigger: word,
             start: 'top bottom',
-            end: 'top center-=15%',
-            scrub: true,
+            // end: 'top center-=15%',
+            // scrub: true,
+            toggleActions: 'play none none none',
           },
         });
       }
@@ -86,11 +87,13 @@ function TypoAnimation() {
         opacity: 1,
         y: 0,
         stagger: 0.01,
+        duration: 3,
         scrollTrigger: {
           trigger: '.split',
           start: 'top bottom',
-          end: 'bottom-=35% center',
-          scrub: true,
+          // end: 'bottom-=35% center',
+          // scrub: true,
+          toggleActions: "play none none none"
         },  
       });
     };
