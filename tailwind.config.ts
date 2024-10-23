@@ -20,7 +20,7 @@ const config: Config = {
       },
     },
     fontFamily: {
-      primary: 'var(--noto_sans_kr)'
+      pretendard: ["var(--font-pretendard)"],
     },
     extend: {
       colors: {

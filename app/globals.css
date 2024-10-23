@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply bg-primary text-white font-primary leading-loose
+    @apply bg-primary text-white font-pretendard leading-loose
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1];
@@ -23,7 +23,6 @@
     -webkit-text-stroke: 1px #ACA7A6;
   }
 }
-
 .text-accent {
   @apply text-[#ACA7A6];
 }

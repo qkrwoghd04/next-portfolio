@@ -56,12 +56,12 @@ const Project = () => {
                     <div className="h-[50vh] 2xl:h-full relative group flex justify-center items-center">
                       {/* image */}
                       <div className="relative w-full h-full flex justify-center items-center">
-                        <p className="text-3xl z-50 text-white p-4 whitespace-pre-line leading-10">{project.title}</p>
+                        <p className="text-3xl z-50 text-white p-4 whitespace-pre-line leading-10 font-light">{project.title}</p>
                         <Image 
                           src={project.image}
                           quality={100}
                           fill 
-                          className="object-[80%] object-cover opacity-50" 
+                          className="object-[80%] object-cover opacity-40" 
                           alt="Project Image" />
                       </div>
                     </div>
@@ -78,8 +78,8 @@ const Project = () => {
           
           {/* Description */}
           <div className="flex-1 w-full flex-col p-4">
-            <div className="flex flex-col">
-            <p className="text-l whitespace-pre-line">{project.description}</p>
+            <div className="flex flex-col justify-center items-center">
+            <p className="w-2/3 text-l whitespace-pre-line">{project.description}</p>
               {/* button */}
               <div className="absolute bottom-2 left-2 w-[70px] h-[70px]">
                 {/* git project button */}

@@ -1,16 +1,15 @@
 import "./globals.css";
-import { Noto_Sans_KR } from "next/font/google"; 
+import localFont from "next/font/local";
 import { connectToMongoDB } from "@/lib/db";
 
 // component
 import Header from "@/components/Header"
-import PageTransition from "@/components/PageTransition";
 
-const notoSansKr = Noto_Sans_KR({
-  // preload: true, 기본값
-  subsets: ["latin"], // 또는 preload: false
-  weight: ["100", "400", "700", "900"],
-  variable: "--noto_sans_kr"
+const pretendard = localFont({
+  src: "../static/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
 });
 
 
@@ -26,12 +25,10 @@ export default function RootLayout({
 }) {
   connectToMongoDB();
   return (
-    <html lang="ko" className={`${notoSansKr.variable}`}>
-      <body className={`${notoSansKr.variable}`}>
+    <html lang="ko" className={`${pretendard.variable}`}>
+      <body className={pretendard.variable}>
           <Header />
-          <PageTransition> 
-            {children}
-          </PageTransition>
+          {children}
       </body>
     </html>
   );

@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 
 const profile = {
-  title: "생각하고, 고민합니다",
-  description: "재사용이 가능하게 설계합니다\n 사용자의 관점에서 바라봅니다\n 더 효율적인 방법은 없을지 검색합니다",
+  title: "현재에 만족하지않고, \n새로운 방안을 갈구합니다",
+  description: "저는 현 상황에 안주하지 않으며,\n 항상 새로운 배움을 추구하고 얻은 지식을 실천합니다",
   info: [
     {
       fieldName: "Name.",
@@ -48,19 +48,19 @@ const Profile = () => {
 
       <div className='w-screen h-screen flex flex-col items-center justify-center 2xl:flex-row'>
         {/* Photo with Info */}
-        <div className='relative w-full h-full 2xl:h-2/3 mt-20 p-4'>
+        <div className='relative w-full h-full 2xl:h-2/3 mt-20 p-4 flex justify-center items-center'>
           <Image
             src="/assets/images/profile.jpg"
-            quality={50}
+            quality={75}
             fill
-            className='object-cover rounded-md object-[80%] opacity-30'
+            className='object-cover rounded-md object-[80%] opacity-20'
             alt="Profile"
           />
-          <div className='w-full h-full flex flex-col items-start justify-center gap-10'>
-            <div className='text-4xl'>
+          <div className='flex flex-col items-start justify-center gap-10'>
+            <div className='text-4xl font-thin whitespace-pre-line 2xl:leading-relaxed 2xl:text-6xl'>
               {profile.title}
             </div>
-            <div className='text-2xl whitespace-pre-line leading-relaxed'>
+            <div className='text-xl whitespace-pre-line 2xl:leading-relaxed 2xl:text-3xl font-extralight'>
               {profile.description}
             </div>
           </div>
@@ -71,13 +71,13 @@ const Profile = () => {
         {/* Objective */}
         <div className='w-full h-full 2xl:h-2/3 p-4'>
           <div className='w-full h-full flex flex-col items-center justify-center'>
-            <div className='flex flex-col justify-center items-start gap-y-8'>
-              <ul className='flex flex-col justify-start items-start gap-4'>
+            <div className='flex flex-col justify-center items-start'>
+              <ul className='flex flex-col justify-start items-start gap-y-2 2xl:gap-y-8'>
                 {profile.info.map((item, index) => {
                   return (
                     <li key={index} className="flex gap-4">
-                      <div className='text-l 2xl:text-2xl font-semibold'>{item.fieldName}</div>
-                      <div className='text-l 2xl:text-2xl'>{item.fieldValue}</div>
+                      <div className='text-l 2xl:text-2xl font-thin'>{item.fieldName}</div>
+                      <div className='text-l 2xl:text-2xl font-extralight'>{item.fieldValue}</div>
                     </li>
                   )
                 })}
