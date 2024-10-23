@@ -1,41 +1,22 @@
 import React, { useEffect } from 'react';
+import Image from 'next/image'
+import BackgroundImg from '../public/assets/images/background.jpg'
 
 // Scroll Effect
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
-import Lenis from '@studio-freight/lenis';
 import { motion } from 'framer-motion';
 
-function TypoAnimation() {
+function Hero() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let lenis;
-
     const text = new SplitType('.target');
 
     const splitText = new SplitType('.split', {
       types: 'words, chars',
     });
-
-    // scroll setting
-    const initSmooth = () => {
-      lenis = new Lenis({
-        lerp: 0.025,
-        smoothWheel: true,
-      });
-
-      lenis.on('scroll', () => ScrollTrigger.update());
-
-      const scrollFn = (time) => {
-        lenis.raf(time);
-        requestAnimationFrame(scrollFn);
-      };
-
-      requestAnimationFrame(scrollFn);
-    };
-
 
     // Animate when scoll
     const scroll = () => {
@@ -69,7 +50,7 @@ function TypoAnimation() {
           scrollTrigger: {
             trigger: word,
             start: 'top bottom',
-            // end: 'top center-=15%',
+            end: 'top center-=15%',
             // scrub: true,
             toggleActions: 'play none none none',
           },
@@ -99,7 +80,7 @@ function TypoAnimation() {
     };
 
     const init = () => {
-      initSmooth();
+
       scroll();
     };
 
@@ -108,6 +89,18 @@ function TypoAnimation() {
 
   return (
     <section className='w-full h-[100vh] flex flex-col justify-center items-center'>
+      <Image
+        src={BackgroundImg}
+        placeholder="blur"
+        quality={100}
+        fill
+        sizes='100vw'
+        style={{
+          objectFit: 'cover',
+          opacity: 0.2,
+        }}
+        alt="Picture of the author"
+      />
       <div className='flex flex-col relative px-8 py-10 z-20'>
         <h2 className='content_title text-6xl 2xl:text-[6vw] leading-[0.8] text-center grid gap-8'>
           <span className='uppercase target'>constant</span>
@@ -123,7 +116,7 @@ function TypoAnimation() {
           지속적인 적응이 필요한 IT 분야에서는<br />
           열정만으로는 충분하지 않다고 생각합니다<br /><br />
           저는 관습에 따라 행동하지 않습니다<br />
-          스스로의 <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>을 통해 결정하고<br />
+          스스로의 <b className='text-white'>인지</b>와 <b className='text-white'>판단</b>으로<br />
           다양한 선택을 할 줄 아는 사람입니다
         </motion.p>
       </div>
@@ -131,4 +124,4 @@ function TypoAnimation() {
   );
 }
 
-export default TypoAnimation;
+export default Hero;

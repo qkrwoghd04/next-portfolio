@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -21,25 +20,10 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
-    num: "01",
-    category: "AI/Deep Learning",
-    title: "BERT와 ViT 모델을 융합한 다중 모달 딥러닝 모델 구현",
-    description: "졸업 논문 프로젝트로서 멀티 모달 딥러닝을 활용한 낙상/수면 이진 분류 모델 구현",
-    stack: [
-      { name: "Pytorch" },
-      { name: "Tensorflow" },
-      { name: "Python" },
-    ],
-    image: "/assets/work/thumb1.png",
-    github: "https://github.com/qkrwoghd04/binary_classification_using_BERT-ViT",
-  },
-  {
-    num: "02",
     category: "Fullstack",
     title: "Express js기반 노인 친화적 건강 식품 어플 프론트/백엔드 개발 및 유지 보수 / 운영",
-    description: "React Native 기반의 Express.js 프레임워크를 활용한 Android 플랫폼 모바일 애플리케이션 개발",
-    stack: [
-      { name: "Node js" },
+    description: [
+      { name: "- React Native 기반의 Express.js 프레임워크를 활용한 Android 플랫폼 모바일 애플리케이션 개발" },
       { name: "Express.js" },
       { name: "AWS" },
       { name: "Expo" },
@@ -48,12 +32,10 @@ const projects = [
     github: "https://github.com/qkrwoghd04/healing-hub",
   },
   {
-    num: "03",
     category: "Fullstack",
     title: "React 기반의 Next.js 프레임워크를 사용하여 현대적이고 반응형인 개인 포트폴리오 웹사이트를 구축",
-    description: "Next.js의 app 라우터를 사용하여 프로젝트 구조화 및 TypeScript 적용으로 코드 품질 향상",
-    stack: [
-      { name: "React" },
+    description: [
+      { name: "Next.js의 app 라우터를 사용하여 프로젝트 구조화 및 TypeScript 적용으로 코드 품질 향상" },
       { name: "Next.js" },
       { name: "Route53" },
       { name: "Tailwind CSS" },
@@ -62,7 +44,8 @@ const projects = [
     github: "https://github.com/qkrwoghd04/next-portfolio",
   },
 ]
-const Work = () => {
+
+const Project = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -76,26 +59,21 @@ const Work = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" } }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="h-screen w-screen flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div className="flex flex-col 2xl:flex-row 2xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}
-              </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 captialize">{project.category} Project</h2>
-              {/* project description */}
-              <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
+              <ul className="flex flex-col gap-4">
+                {project.description.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
                       {item.name}
-                      {index !== project.stack.length - 1 && ","}
+                      {index !== project.description.length - 1 && ","}
                     </li>
                   )
                 })}
@@ -154,4 +132,4 @@ const Work = () => {
   )
 }
 
-export default Work;
+export default Project;

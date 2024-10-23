@@ -5,7 +5,6 @@ import { connectToMongoDB } from "@/lib/db";
 // component
 import Header from "@/components/Header"
 import PageTransition from "@/components/PageTransition";
-import StairTransition from "@/components/StairTransition";
 
 const notoSansKr = Noto_Sans_KR({
   // preload: true, 기본값
@@ -30,7 +29,6 @@ export default function RootLayout({
     <html lang="ko" className={`${notoSansKr.variable}`}>
       <body className={`${notoSansKr.variable}`}>
           <Header />
-          <StairTransition />
           <PageTransition> 
             {children}
           </PageTransition>
