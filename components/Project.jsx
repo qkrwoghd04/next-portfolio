@@ -18,7 +18,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "건강은 저희가 책임지겠습니다\n 빠르게 전화주세요 HealingHub",
-    description: "아버지의 매장에서 대부분의 50~70대 고객들이 전화로 상품을 문의하시는 것을 발견했습니다. 이로 인해 고객들이 매장 번호를 찾지 않고도 편리하게 접근할 수 있도록, App을 설치해 드리고 안내해드리면, 상품 홍보에 도움이 될 뿐만 아니라 고객 유지율도 높일 수 있을 것이라 생각해 개발했습니다",
+    description: "아버지의 매장의 대부분 50~70대 고객님들이 전화로 상품을 문의하시는 것을 발견했습니다.\n 고객님들이 매장 번호를 찾기위해 최근 통화 내역을 일일이 확인하는 것이 아닌, App을 설치해 드리고 안내해드리면,\n 매장 홍보에 도움이 될 뿐만 아니라 고객 유지율도 높일 수 있을 것이라 생각해 개발했습니다",
     image: "/assets/images/healingHubThumb.png",
     github: "https://github.com/qkrwoghd04/healing-hub",
   },
@@ -56,7 +56,7 @@ const Project = () => {
                     <div className="h-[50vh] 2xl:h-full relative group flex justify-center items-center">
                       {/* image */}
                       <div className="relative w-full h-full flex justify-center items-center">
-                        <p className="text-3xl z-50 text-white p-4 whitespace-pre-line leading-10 font-light">{project.title}</p>
+                        <p className="text-3xl z-50 text-white p-4 whitespace-pre-line leading-10 font-extralight">{project.title}</p>
                         <Image 
                           src={project.image}
                           quality={100}
@@ -79,7 +79,7 @@ const Project = () => {
           {/* Description */}
           <div className="flex-1 w-full flex-col p-4">
             <div className="flex flex-col justify-center items-center">
-            <p className="w-2/3 text-l whitespace-pre-line">{project.description}</p>
+            <p className="w-[90%] text-l whitespace-pre-line font-extralight">{project.description}</p>
               {/* button */}
               <div className="absolute bottom-2 left-2 w-[70px] h-[70px]">
                 {/* git project button */}
