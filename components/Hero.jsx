@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from 'react';
 import Image from 'next/image'
 import BackgroundImg from '../public/assets/images/background.jpg'
@@ -18,25 +19,22 @@ function Hero() {
       types: 'words, chars',
     });
 
-    // Animate when scoll
-    const scroll = () => {
+    // Animate Constant Challenge Text
+    const chars = text.chars;
+    const words = text.words;
 
-      // Animate Constant Challenge Text
-      const chars = text.chars;
-      const words = text.words;
+    for (const word of words) {
+      chars.forEach((char) => {
+        gsap.set(char.parentNode, { perspective: 3000 });
+      });
 
-      for (const word of words) {
-        chars.forEach((char) => {
-          gsap.set(char.parentNode, { perspective: 3000 });
-        });
-
-        gsap.fromTo(chars, {
-          'will-change': 'opacity, transform',
-          opacity: 0,
-          y: (position, _, arr) => -40 * Math.abs(position - arr.length / 2),
-          z: () => gsap.utils.random(-1500, -600),
-          rotationX: () => gsap.utils.random(-500, -200),
-        },
+      gsap.fromTo(chars, {
+        'will-change': 'opacity, transform',
+        opacity: 0,
+        y: (position, _, arr) => -40 * Math.abs(position - arr.length / 2),
+        z: () => gsap.utils.random(-1500, -600),
+        rotationX: () => gsap.utils.random(-500, -200),
+      },
         {
           ease: 'power1.inOut',
           opacity: 1,
@@ -55,15 +53,15 @@ function Hero() {
             toggleActions: 'play none none none',
           },
         });
-      }
+    }
 
-      // Animate the split text in motion.p
-      const splitChars = splitText.chars;
+    // Animate the split text in motion.p
+    const splitChars = splitText.chars;
 
-      gsap.fromTo(splitChars, {
-        opacity: 0,
-        y: 20,
-      },
+    gsap.fromTo(splitChars, {
+      opacity: 0,
+      y: 20,
+    },
       {
         opacity: 1,
         y: 0,
@@ -75,30 +73,20 @@ function Hero() {
           // end: 'bottom-=35% center',
           // scrub: true,
           toggleActions: "play none none none"
-        },  
+        },
       });
-    };
 
-    const init = () => {
-
-      scroll();
-    };
-
-    init();
-  }, []); 
+  }, []);
 
   return (
     <section className='w-full h-[100vh] flex flex-col justify-center items-center'>
       <Image
         src={BackgroundImg}
         placeholder="blur"
-        quality={100}
+        quality={75}
         fill
         sizes='100vw'
-        style={{
-          objectFit: 'cover',
-          opacity: 0.2,
-        }}
+        className='object-cover opacity-20'
         alt="Picture of the author"
       />
       <div className='flex flex-col relative px-8 py-10 z-20'>

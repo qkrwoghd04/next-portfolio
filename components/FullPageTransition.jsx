@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef  } from 'react';
+"use client"
+
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 //Components
 import Profile from './Profile'
@@ -7,23 +9,23 @@ import Project from './Project';
 
 const sections = [
   { title: 'Section 1', script: <Hero /> },
-  { title: 'Section 2', script: <Profile />},
-  { title: 'Section 3', script: <Project />}
+  { title: 'Section 2', script: <Profile /> },
+  { title: 'Section 3', script: <Project /> }
 ];
 
 const FullPageTransition = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const lastScrollTime = useRef(Date.now());
-  const scrollThreshold = useRef(50); 
-  const scrollAccumulator = useRef(0); 
+  const scrollThreshold = useRef(50);
+  const scrollAccumulator = useRef(0);
 
 
   const handleScroll = useCallback((direction) => {
     if (isScrolling) return;
 
     const now = Date.now();
-    if (now - lastScrollTime.current < 50) return; 
+    if (now - lastScrollTime.current < 50) return;
     lastScrollTime.current = now;
 
     setIsScrolling(true);
@@ -32,18 +34,17 @@ const FullPageTransition = () => {
     } else if (direction === 'up' && currentSection > 0) {
       setCurrentSection(prev => prev - 1);
     }
-
     scrollAccumulator.current = 0;
 
     setTimeout(() => {
       setIsScrolling(false);
     }, 1000);
-  }, [currentSection, isScrolling, sections.length]);
+  }, [currentSection, isScrolling]); // sections.length 제거
 
 
   const handleWheel = useCallback((e) => {
     e.preventDefault();
-    
+
     scrollAccumulator.current += e.deltaY;
 
     if (Math.abs(scrollAccumulator.current) >= scrollThreshold.current) {
@@ -58,7 +59,7 @@ const FullPageTransition = () => {
 
   const handleTouchStart = useCallback((e) => {
     if (isScrolling) return;
-    
+
     const touch = e.touches[0];
     const startY = touch.pageY;
     let hasMoved = false;
@@ -138,7 +139,7 @@ const FullPageTransition = () => {
                 setTimeout(() => setIsScrolling(false), 1000);
               }
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSection === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSection === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
               }`}
             aria-label={`Go to section ${index + 1}`}
           />
