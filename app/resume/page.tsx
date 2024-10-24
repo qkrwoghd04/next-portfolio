@@ -1,288 +1,201 @@
 "use client"
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-  FaAws,
-  FaGithub,
-  FaDocker,
-} from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
-
-
-// about data
-const about = {
-  title: "나에 대하여",
-  description: "묵묵하면서 유연한 사람을 찾고 계신가요?\n혹은 단조롭지만 특색있는 사람은 어떠신가요?\n거짓말이라고 느끼실 수 있지만, 전 상반된 각각의 특징들을 모두 가지고 있는 사람입니다. 어디서는 일할 준비가 되어 있고, 편하게 연락주시면 감사하겠습니다",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "JAEHONG PARK"
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Republic of Korea"
-    },
-    {
-      fieldName: "Age",
-      fieldValue: "26"
-    },
-    {
-      fieldName: "Education",
-      fieldValue: "Xian-Jiaotong Liverpool University"
-    },
-    {
-      fieldName: "Major",
-      fieldValue: "Information & Computing Science"
-    },
-    {
-      fieldName: "GPA",
-      fieldValue: "3.5/4.0 (Upper Second Grade)"
-    },
-    {
-      fieldName: "Language",
-      fieldValue: "Korean, English, Chinese"
-    },
-    {
-      fieldName: "Spacialty",
-      fieldValue: "Node.js, React, AWS"
-    },
-  ]
-};
-
-// experience data
-const experience = {
-  icon: '/asset/resume/badge.svg',
-  title: "경력",
-  description:
-    "현재 다양한 직무와 인턴 경험 자리를 찾고 있습니다",
-  items: [
-    {
-      company: "프리랜서",
-      position: "Full Stack Developer",
-      duration: "2024.08 - ",
-    },
-  ]
-};
-
-// education data
-const education = {
-  icon: '/asset/resume/cap.svg',
-  title: "교육",
-  description:
-    "고등학교, 학사 및 졸업 후 수강한 교육 내용입니다",
-  items: [
-    {
-      institution: "Udemy Platform",
-      degree: "Cloud Practitioner Certification 취득",
-      duration: "2024.07 - 2024-08-21",
-    },
-    {
-      institution: "Xian-Jiaotong Liverpool University",
-      degree: "Infomation & Computing Science 학사",
-      duration: "2017.08 - 2024-08-02",
-    },
-    {
-      institution: "China Hongkong English School",
-      degree: "국제 고등학교 재학",
-      duration: "2014.08 - 2017.06",
-    },
-  ]
-};
-
-// skills data
-const skills = {
-  title: "기술 스택",
-  description:
-    "사용할 줄 아는 혹은 사용해본 기술 스택입니다",
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html"
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css"
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript"
-    },
-    {
-      icon: <FaReact />,
-      name: "React"
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma"
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js"
-    },
-    {
-      icon: <FaAws />,
-      name: "aws",
-    },
-    {
-      icon: <FaGithub />,
-      name: "github",
-    },
-    {
-      icon: <FaDocker />,
-      name: "docker",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-  ]
-};
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { motion } from "framer-motion"
+import React from 'react';
+import { Download, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import Image from 'next/image'
 
 const Resume = () => {
+  const personalInfo = {
+    name: "박재홍",
+    title: "Software Engineer",
+    email: "qkrwoghd04@naver.com",
+    phone: "010-3360-4104",
+    location: "서울시 마포구",
+    website: "www.jaehong-park.com"
+  };
+
+  const skills = [
+    {name:"HTML 5, CSS", brief:"jaehong-park.com"},
+    {name:"Next.js", brief:"jaehong-park.com"},
+    {name:"React Native", brief:"힐링 허브 FE"},
+    {name:"Node.js", brief:"힐링 허브 BE"},
+    {name:"AWS", brief: "힐링 허브 배포"},
+    {name:"Java", brief: "중급"},
+    {name:"Docker", brief: "초급"}
+  ];
+
+  const languages = [
+    { name: "한국어", level: "원어민" },
+    { name: "영어", level: "비즈니스 수준" },
+    { name: "중국어", level: "비즈니스 수준" }
+  ];
+
+  const experience = [
+    {
+      company: "ABC 테크놀로지",
+      position: "시니어 프론트엔드 개발자",
+      period: "2021 - 현재",
+      highlights: [
+        "React와 TypeScript를 활용한 대규모 웹 애플리케이션 개발 및 유지보수",
+        "마이크로프론트엔드 아키텍처 설계 및 구현으로 개발 생산성 30% 향상",
+        "주니어 개발자 멘토링 및 기술 문서화 시스템 구축",
+        "웹 성능 최적화를 통한 페이지 로드 시간 50% 감소"
+      ]
+    },
+    {
+      company: "XYZ 솔루션즈",
+      position: "프론트엔드 개발자",
+      period: "2018 - 2021",
+      highlights: [
+        "Vue.js 기반 실시간 데이터 시각화 대시보드 개발",
+        "REST API 설계 및 백엔드 개발자와의 협업",
+        "반응형 UI/UX 디자인 설계 및 구현",
+        "테스트 자동화 도입으로 QA 시간 40% 단축"
+      ]
+    }
+  ];
+
+  const education = [
+    {
+      school: "한국대학교",
+      degree: "컴퓨터공학 학사",
+      period: "2014 - 2018",
+      details: "학점: 4.0/4.5"
+    }
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: {
-          delay: 2.4,
-          duration: 0.4,
-          ease: "easeIn",
-        },
-      }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
-    >
-      <div className="container mx-auto">
-        <Tabs
-          defaultValue="about"
-          className="flex flex-col xl:flex-row gap-[60px]"
-        >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="about">나에 대하여</TabsTrigger>
-            <TabsTrigger value="experience">경력</TabsTrigger>
-            <TabsTrigger value="education">교육</TabsTrigger>
-            <TabsTrigger value="skills">기술 스택</TabsTrigger>
-          </TabsList>
-
-          {/* content */}
-          <div className="min-h-[70vh] w-full">
-            {/* about */}
-            <TabsContent value="about" className="w-full text-center xl:text-left items-center">
-              <div className="whitespace-pre-wrap flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/80 mx-auto xl:mx-0 border-double border-8 border-accent p-4 justify-center">
-                  {about.description}
-                </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4 border-b border-white/20 hover:border-white transition-colors duration-300"
-                      >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-l">{item.fieldValue}</span>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-            {/* experience */}
-            <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      )
-                    })}
-
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            {/* education */}
-            <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      )
-                    })}
-
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            {/* skills */}
-            <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
-                  {skills.skillList.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-
-            </TabsContent>
+    <div className="max-w-5xl mx-auto bg-white min-h-screen flex flex-col md:flex-row print:flex-row border-gray-200 border-[1px]">
+      {/* 왼쪽 사이드바 (1/3) */}
+      <div className="w-full md:w-1/3 print:w-1/3 bg-gray-50 p-8 print:p-8">
+        <div className="sticky top-8">
+          {/* 프로필 이미지 */}
+          <div className="mb-8">
+            <Image
+              src="/assets/images/resume.jpg"
+              quality={100}
+              width={200}
+              height={200}
+              className="mx-auto object-cover border-4 border-white shadow-lg"
+              alt="Resume"
+            />
           </div>
-        </Tabs>
+
+          {/* 이름 및 직함 */}
+          <div className="text-center mb-4">
+            <h1 className="text-2xl font-normal text-gray-800 mb-2">{personalInfo.name}</h1>
+            <p className="text-gray-600 font-light">{personalInfo.title}</p>
+          </div>
+          {/* 다운로드 버튼 */}
+          <button
+            onClick={() => window.print()}
+            className="w-full mb-8 print:hidden text-black text-sm py-2 px-4 rounded-lg flex items-center justify-center gap-2 border-[1px] border-gray-300 hover:bg-gray-200 transition-colors"
+          >
+            <Download size={18} />
+            PDF 다운로드
+          </button>
+
+          {/* 연락처 정보 */}
+          <div className="space-y-4 mb-8">
+            <h2 className="text-lg font-normal text-gray-800 mb-4 border-b-[1px] border-gray-400">Contact</h2>
+            <div className="flex items-center space-x-3 text-gray-600">
+              <Mail size={18} />
+              <span className="text-sm">{personalInfo.email}</span>
+            </div>
+            <div className="flex items-center space-x-3 text-gray-600">
+              <Phone size={18} />
+              <span className="text-sm">{personalInfo.phone}</span>
+            </div>
+            <div className="flex items-center space-x-3 text-gray-600">
+              <MapPin size={18} />
+              <span className="text-sm">{personalInfo.location}</span>
+            </div>
+            <div className="flex items-center space-x-3 text-gray-600">
+              <Globe size={18} />
+              <span className="text-sm">{personalInfo.website}</span>
+            </div>
+          </div>
+
+          {/* 기술 스택 */}
+          <div className="mb-8">
+            <h2 className="text-lg font-normal text-gray-800 mb-4 border-b-[1px] border-gray-400">Skills</h2>
+            <div className="flex flex-col gap-2">
+              {skills.map((skill, index) => (
+                <div className='flex justify-between items-center'>
+                  <span
+                    key={index}
+                    className="py-1 text-sm text-gray-900"
+                  >
+                    {skill.name}
+                  </span>
+                  <span className="text-sm text-gray-400">{skill.brief}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 언어 */}
+          <div className="mb-8">
+            <h2 className="text-lg font-normal text-gray-800 mb-4 border-b-[1px] border-gray-400">Languages</h2>
+            <div className="space-y-2">
+              {languages.map((language, index) => (
+                <div key={index} className="flex justify-between items-center">
+                  <span className="text-gray-900">{language.name}</span>
+                  <span className="text-sm text-gray-400">{language.level}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
       </div>
-    </motion.div>
-  )
-}
+
+      {/* 오른쪽 메인 컨텐츠 (2/3) */}
+      <div className="w-full md:w-2/3 print:w-2/3 p-8 print:p-8">
+        {/* 경력 사항 */}
+        <section className="mb-12">
+          <h1 className="text-2xl font-Medium text-gray-800 mb-6 pb-2 border-b">코드 한 줄, 배움 한 걸음: 즐거움으로 성장하는 신입 개발자</h1>
+          <div>
+            <p></p>
+          </div>
+          <h2 className="text-2xl font-Medium text-gray-800 mb-6 pb-2 border-b">프로젝트</h2>
+          <div className="space-y-8">
+            {experience.map((exp, index) => (
+              <div key={index} className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-bold text-gray-800">{exp.company}</h3>
+                  <span className="text-gray-600 text-sm">{exp.period}</span>
+                </div>
+                <p className="text-gray-700 font-medium">{exp.position}</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-600">
+                  {exp.highlights.map((highlight, i) => (
+                    <li key={i} className="text-sm">{highlight}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 학력 */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b">학력</h2>
+          <div className="space-y-4">
+            {education.map((edu, index) => (
+              <div key={index} className="space-y-1">
+                <div className="flex justify-between items-start">
+                  <h3 className="text-xl font-bold text-gray-800">{edu.school}</h3>
+                  <span className="text-gray-600 text-sm">{edu.period}</span>
+                </div>
+                <p className="text-gray-700">{edu.degree}</p>
+                <p className="text-gray-600 text-sm">{edu.details}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
 
 export default Resume;
