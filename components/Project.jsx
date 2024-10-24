@@ -17,7 +17,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "건강은 저희가 책임지겠습니다\n 빠르게 전화주세요 HealingHub",
+    title: "HealingHub \n건강은 저희가 책임지겠습니다\n 빠르게 전화주세요",
     description: "아버지의 매장의 대부분 50~70대 고객님들이 전화로 상품을 문의하시는 것을 발견했습니다.\n 고객님들이 매장 번호를 찾기위해 최근 통화 내역을 일일이 확인하는 것이 아닌, App을 설치해 드리고 안내해드리면,\n 매장 홍보에 도움이 될 뿐만 아니라 고객 유지율도 높일 수 있을 것이라 생각해 개발했습니다",
     image: "/assets/images/healingHubThumb.png",
     github: "https://github.com/qkrwoghd04/healing-hub",
@@ -47,13 +47,13 @@ const Project = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="mb-12"
+              className="mb-6"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[50vh] 2xl:h-full relative group flex justify-center items-center">
+                    <div className="h-[40vh] 2xl:h-full relative group flex justify-center items-center">
                       {/* image */}
                       <div className="relative w-full h-full flex justify-center items-center">
                         <p className="text-3xl z-50 text-white p-4 whitespace-pre-line leading-10 font-extralight">{project.title}</p>
@@ -61,7 +61,7 @@ const Project = () => {
                           src={project.image}
                           quality={100}
                           fill 
-                          className="object-[80%] object-cover opacity-40" 
+                          className="object-[80%] object-cover opacity-60" 
                           alt="Project Image" />
                       </div>
                     </div>
