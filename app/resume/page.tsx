@@ -15,13 +15,13 @@ const Resume = () => {
   };
 
   const skills = [
-    {name:"HTML 5, CSS", brief:"jaehong-park.com"},
-    {name:"Next.js", brief:"jaehong-park.com"},
-    {name:"React Native", brief:"힐링 허브 FE"},
-    {name:"Node.js", brief:"힐링 허브 BE"},
-    {name:"AWS", brief: "힐링 허브 배포"},
-    {name:"Java", brief: "중급"},
-    {name:"Docker", brief: "초급"}
+    { name: "HTML 5, CSS", brief: "jaehong-park.com" },
+    { name: "Next.js", brief: "jaehong-park.com" },
+    { name: "React Native", brief: "힐링 허브 FE" },
+    { name: "Node.js", brief: "힐링 허브 BE" },
+    { name: "AWS", brief: "힐링 허브 배포" },
+    { name: "Java", brief: "중급" },
+    { name: "Docker", brief: "초급" }
   ];
 
   const languages = [
@@ -30,37 +30,21 @@ const Resume = () => {
     { name: "중국어", level: "비즈니스 수준" }
   ];
 
-  const experience = [
+  const projects = [
     {
-      company: "ABC 테크놀로지",
-      position: "시니어 프론트엔드 개발자",
-      period: "2021 - 현재",
-      highlights: [
-        "React와 TypeScript를 활용한 대규모 웹 애플리케이션 개발 및 유지보수",
-        "마이크로프론트엔드 아키텍처 설계 및 구현으로 개발 생산성 30% 향상",
-        "주니어 개발자 멘토링 및 기술 문서화 시스템 구축",
-        "웹 성능 최적화를 통한 페이지 로드 시간 50% 감소"
-      ]
+      name: "매장 관리와 상품 확인 및 문의를, 하나의 App으로, 힐링 허브",
+      decription: "이 앱은 관리자(admin)가 상품을 관리할 수 있는 기능을 제공하며, 사용자는 실시간으로 업데이트된 상품 정보를 확인할 수 있습니다. AWS 클라우드를 활용하여 안정적인 데이터 저장 및 전송을 구현하였으며, 확장성을 고려한 아키텍처 설계를 적용하였습니다.",
+      period: "2024 -",
+      skills: "Expo, TailwindCSS, EB, DynamoDB, S3, Node.js"
     },
-    {
-      company: "XYZ 솔루션즈",
-      position: "프론트엔드 개발자",
-      period: "2018 - 2021",
-      highlights: [
-        "Vue.js 기반 실시간 데이터 시각화 대시보드 개발",
-        "REST API 설계 및 백엔드 개발자와의 협업",
-        "반응형 UI/UX 디자인 설계 및 구현",
-        "테스트 자동화 도입으로 QA 시간 40% 단축"
-      ]
-    }
   ];
 
   const education = [
     {
-      school: "한국대학교",
+      school: "Xian-Jiaotong Liverpool University",
       degree: "컴퓨터공학 학사",
-      period: "2014 - 2018",
-      details: "학점: 4.0/4.5"
+      period: "2017 - 2024",
+      details: "학점: 3.5/4.0"
     }
   ];
 
@@ -117,15 +101,13 @@ const Resume = () => {
           </div>
 
           {/* 기술 스택 */}
+
           <div className="mb-8">
             <h2 className="text-lg font-normal text-gray-800 mb-4 border-b-[1px] border-gray-400">Skills</h2>
             <div className="flex flex-col gap-2">
               {skills.map((skill, index) => (
-                <div className='flex justify-between items-center'>
-                  <span
-                    key={index}
-                    className="py-1 text-sm text-gray-900"
-                  >
+                <div key={index} className='flex justify-between items-center'>
+                  <span className="py-1 text-sm text-gray-900">
                     {skill.name}
                   </span>
                   <span className="text-sm text-gray-400">{skill.brief}</span>
@@ -154,24 +136,20 @@ const Resume = () => {
       <div className="w-full md:w-2/3 print:w-2/3 p-8 print:p-8">
         {/* 경력 사항 */}
         <section className="mb-12">
-          <h1 className="text-2xl font-Medium text-gray-800 mb-6 pb-2 border-b">코드 한 줄, 배움 한 걸음: 즐거움으로 성장하는 신입 개발자</h1>
-          <div>
-            <p></p>
+          <h1 className="text-2xl font-Medium text-gray-800 mb-6 pb-2 border-b">중학교 3학년, 중국으로 가는 결정을 내리다</h1>
+          <div className='font-light mb-6'>
+            <p>고등학생이 되기 전, 중국으로 갈 기회가 생겼습니다. 어린 제가 당시 어떤 생각을 했는지 잘 기억나지 않지만, 활발하고 도전적인 성격 덕분에 두려움을 잊고 중국 중산이라는 도시에서 새로운 시작을 했습니다. 성실한 학생이었던 저는 초기에 저조했던 성적이 졸업할땐 상향 그래프를 띄웠고, 중국을 떠나기 아쉬운 마음에 대학을 찾던 중 영국계 중국 대학인 XJTLU라는 매력적인 학교를 발견하게 되었습니다.그러나 코로나19로 인해 지속되는 격리와 온라인 수업으로 인해 대학 생활 동안 누릴 수 있었던 다양한 경험을 놓쳤습니다. 졸업한 현재 이력서에 적을 내용이 거의 없는 상황이지만, 이는 오히려 저에게 큰 동기와 자극을 주고 있습니다. 매일 12시간 이상 공부하면서도 지치지 않고, 배움의 즐거움을 느끼며 앞으로 나아가고 있습니다</p>
           </div>
           <h2 className="text-2xl font-Medium text-gray-800 mb-6 pb-2 border-b">프로젝트</h2>
           <div className="space-y-8">
-            {experience.map((exp, index) => (
+            {projects.map((exp, index) => (
               <div key={index} className="space-y-2">
                 <div className="flex justify-between items-start">
-                  <h3 className="text-xl font-bold text-gray-800">{exp.company}</h3>
+                  <h3 className="text-xl font-medium text-gray-800">{exp.name}</h3>
                   <span className="text-gray-600 text-sm">{exp.period}</span>
                 </div>
-                <p className="text-gray-700 font-medium">{exp.position}</p>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  {exp.highlights.map((highlight, i) => (
-                    <li key={i} className="text-sm">{highlight}</li>
-                  ))}
-                </ul>
+                <p className="text-gray-500 font-normal">{exp.decription}</p>
+                <p className="text-sm text-gray-700 font-Medium">{exp.skills}</p>
               </div>
             ))}
           </div>
@@ -179,16 +157,16 @@ const Resume = () => {
 
         {/* 학력 */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b">학력</h2>
+          <h2 className="text-2xl font-normal text-gray-800 mb-6 pb-2 border-b">학력</h2>
           <div className="space-y-4">
             {education.map((edu, index) => (
               <div key={index} className="space-y-1">
                 <div className="flex justify-between items-start">
-                  <h3 className="text-xl font-bold text-gray-800">{edu.school}</h3>
+                  <h3 className="text-xl font-medium text-gray-800">{edu.school}</h3>
                   <span className="text-gray-600 text-sm">{edu.period}</span>
                 </div>
-                <p className="text-gray-700">{edu.degree}</p>
-                <p className="text-gray-600 text-sm">{edu.details}</p>
+                <p className="text-gray-500 font-normal">{edu.degree}</p>
+                <p className="text-sm text-gray-700 font-Medium">{edu.details}</p>
               </div>
             ))}
           </div>
