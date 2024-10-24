@@ -44,11 +44,11 @@ function Hero() {
       <Image
         src={BackgroundImg}
         placeholder="blur"
-        quality={75}
+        quality={100}
         fill
         priority
         sizes="100vw"
-        className='object-cover opacity-50'
+        className='object-cover opacity-35'
         alt="Background image"
       />
       <div className='relative px-8 py-10 z-20'>
@@ -65,7 +65,7 @@ function Hero() {
           transition={{ duration: 1, delay: 1 }} // CONSTANT CHALLENGE 애니메이션 이후에 나타나도록 delay 증가
           className="text-center max-w-[580px] mx-auto my-4 text-white/80 text-[20px] lg:text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed font-thin"
         >
-          <b className='font-normal text-white text-[30px] 2xl:text-[50px] font-pretendard'>끊임없는 도전</b> <br /><br />
+          <b className='font-medium text-white text-[30px] 2xl:text-[50px] font-pretendard'>끊임없는 도전</b> <br /><br />
           새롭게 생겨나는 기술과 프레임워크,<br />
           빠르게 변화하는 인프라와 프로세스,<br />
           지속적인 적응이 필요한 IT 분야에서는<br />

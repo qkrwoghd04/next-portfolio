@@ -51,12 +51,12 @@ const Profile = () => {
     <section className='absolute top-0 w-screen h-screen flex justify-center items-center'>
       <div className='w-screen h-screen flex flex-col items-center justify-center 2xl:flex-row'>
         {/* Photo with Info */}
-        <div className='relative flex-1 w-full 2xl:h-2/3 p-4 flex justify-center items-center'>
+        <div className='relative flex-1 w-full 2xl:h-2/3 p-4 flex justify-center items-center bg-black/40'>
           <Image
             src="/assets/images/profile.jpg"
             quality={75}
             fill
-            className='object-cover rounded-md object-[80%] opacity-40'
+            className='object-cover rounded-md object-[80%] opacity-30'
             alt="Profile"
           />
           <div className='flex flex-col items-start justify-center gap-10 z-50'>
@@ -68,17 +68,15 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        {/* 구분선 */}
-        <div className='bg-gray-700 w-[30%] h-[3px] 2xl:w-[2px] 2xl:h-[30%] rounded-full m-4'></div>
 
         {/* Objective */}
         <div className='flex-1 w-full 2xl:h-2/3 bg-gray-100'>
           <div className='w-full h-full flex flex-col items-center justify-center'>
-            <ul className='flex flex-col justify-start items-start gap-y-2 2xl:gap-y-8'>
+            <ul className='flex flex-col justify-start items-start 2xl:gap-y-8 mb-10'>
               {profile.info.map((item, index) => {
                 return (
                   <li key={index} className="flex gap-4">
-                    <div className='text-l 2xl:text-2xl font-normal'>{item.fieldName}</div>
+                    <div className='text-l 2xl:text-2xl font-semibold'>{item.fieldName}</div>
                     <div className='text-l 2xl:text-2xl font-light whitespace-pre-line'>{item.fieldValue}</div>
                   </li>
                 )
