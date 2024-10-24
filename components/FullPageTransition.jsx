@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 //Components
 import Profile from './Profile'
 import Hero from './Hero';
-import Project from './Project';
+
 
 const sections = [
   { title: 'Section 1', script: <Hero /> },
