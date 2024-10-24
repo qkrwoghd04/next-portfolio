@@ -51,7 +51,7 @@ const Profile = () => {
     <section className='absolute top-0 w-screen h-screen flex justify-center items-center'>
       <div className='w-screen h-screen flex flex-col items-center justify-center 2xl:flex-row'>
         {/* Photo with Info */}
-        <div className='relative w-full h-[70%] 2xl:h-2/3 p-4 flex justify-center items-center '>
+        <div className='relative flex-1 w-full 2xl:h-2/3 p-4 flex justify-center items-center'>
           <Image
             src="/assets/images/profile.jpg"
             quality={75}
@@ -72,7 +72,7 @@ const Profile = () => {
         <div className='bg-gray-700 w-[30%] h-[3px] 2xl:w-[2px] 2xl:h-[30%] rounded-full m-4'></div>
 
         {/* Objective */}
-        <div className='w-full h-full 2xl:h-2/3 bg-gray-100'>
+        <div className='flex-1 w-full 2xl:h-2/3 bg-gray-100'>
           <div className='w-full h-full flex flex-col items-center justify-center'>
             <ul className='flex flex-col justify-start items-start gap-y-2 2xl:gap-y-8'>
               {profile.info.map((item, index) => {
