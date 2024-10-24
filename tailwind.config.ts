@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import { color } from "framer-motion";
 import type { Config } from "tailwindcss";
 
@@ -24,7 +25,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: '#000000',
+        primary: '#ffffff',
         accent: {
           DEFAULT: '#ACA7A6',
           hover: '#413D3E',
@@ -66,7 +67,6 @@ const config: Config = {
         blink: "blink 3s infinite",
         pulse: 'pulse 2s infinite 1s', 
       },
-      
     }
   },
 };

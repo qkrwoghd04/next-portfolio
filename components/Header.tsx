@@ -22,12 +22,18 @@ export default function Header() {
 
 
   return (
-    <header className={`${isSticky ? 'fixed w-screen z-10' : 'absolute w-screen transition-all duration-300 ease-in-out z-50'}`}>
+    <header
+      className={`${
+        isSticky
+          ? "fixed w-screen z-10"
+          : "absolute w-screen z-50 transition-all duration-300 ease-in-out"
+      } transition-all duration-300 ease-in-out hover:bg-white/80 hover:backdrop-blur-sm`}
+    >
       <div className="py-4 px-4 mx-4 flex justify-between items-center">
         {/* logo */}
         <Link href="/">
           <h1 className="text-2xl font-semibold">
-            JAEHONG PARK<span className="text-accent"> .</span>
+            JAEHONG PARK<span className="text-gray-700"> .</span>
           </h1>
         </Link>
 

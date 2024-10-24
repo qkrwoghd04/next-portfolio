@@ -40,21 +40,21 @@ function Hero() {
   }, []);
 
   return (
-    <section className='relative w-screen h-screen flex flex-col justify-center items-center'>
+    <section className='relative w-screen h-screen flex flex-col justify-center items-center text-white/100 bg-black/80'>
       <Image
         src={BackgroundImg}
         placeholder="blur"
-        quality={50}
+        quality={75}
         fill
         priority
         sizes="100vw"
-        className='object-cover opacity-20'
+        className='object-cover opacity-50'
         alt="Background image"
       />
       <div className='relative px-8 py-10 z-20'>
         <h2 className='content_title text-6xl 2xl:text-[6vw] leading-[0.8] text-center grid gap-8'>
-          <span className='uppercase title font-light'>constant</span>
-          <span className='uppercase title font-light'>challenge</span>
+          <span className='uppercase title font-extralight'>constant</span>
+          <span className='uppercase title font-extralight'>challenge</span>
         </h2>
       </div>
 

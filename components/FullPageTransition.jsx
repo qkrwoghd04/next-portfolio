@@ -10,7 +10,6 @@ import Project from './Project';
 const sections = [
   { title: 'Section 1', script: <Hero /> },
   { title: 'Section 2', script: <Profile /> },
-  { title: 'Section 3', script: <Project /> }
 ];
 
 const FullPageTransition = () => {
@@ -115,7 +114,7 @@ const FullPageTransition = () => {
       {sections.map((section, index) => (
         <div
           key={index}
-          className="absolute w-full h-full transition-transform duration-1000 ease-in-out bg-black"
+          className="absolute w-full h-full transition-transform duration-1000 ease-in-out"
           style={{
             transform: `translateY(${(index - currentSection) * 100}%)`,
             zIndex: sections.length - index
@@ -139,7 +138,7 @@ const FullPageTransition = () => {
                 setTimeout(() => setIsScrolling(false), 1000);
               }
             }}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSection === index ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSection === index ? 'bg-black scale-125' : 'bg-gray-500 hover:bg-white/75'
               }`}
             aria-label={`Go to section ${index + 1}`}
           />
