@@ -28,8 +28,10 @@ export default function RootLayout({
     <html lang="ko" className={`${pretendard.variable}`}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <body className={pretendard.variable}>
-          <Header />
-          {children}
+        <div className="fixed bottom-0">
+        </div>
+        <Header />
+        {children}
       </body>
     </html>
   );
