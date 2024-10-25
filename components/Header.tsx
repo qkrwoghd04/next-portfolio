@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { Button } from "./ui/button"
 import { useState, useEffect } from "react";
-import { usePathname } from 'next/navigation' // 추가
 
 //components
 import Nav from "./Nav"
@@ -11,7 +10,7 @@ import MobileNav from "./MobileNav";
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
-  const pathname = usePathname(); 
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,15 +21,12 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isResumePage = pathname === '/resume';
-
   return (
     <header
       className={`${
         isSticky
           ? "fixed w-screen z-10"
-          : isResumePage 
-          ? "relative w-full  z-50 transition-all duration-300 ease-in-out" : "absolute w-screen z-50 transition-all duration-300 ease-in-out"
+          : "absolute w-screen z-50 transition-all duration-300 ease-in-out"
       } transition-all duration-300 ease-in-out hover:bg-white/80 hover:backdrop-blur-sm`}
     >
       <div className="py-4 px-4 mx-4 flex justify-between items-center">
