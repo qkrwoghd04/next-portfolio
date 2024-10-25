@@ -39,14 +39,14 @@ const projects = [
   },
 ];
 
-const education = [
-  {
-    school: "Xian-Jiaotong Liverpool University",
-    degree: "컴퓨터공학 학사",
-    period: "2017 - 2024",
-    details: "학점: 3.5/4.0"
-  }
-];
+// const education = [
+//   {
+//     school: "Xian-Jiaotong Liverpool University",
+//     degree: "컴퓨터공학 학사",
+//     period: "2017 - 2024",
+//     details: "학점: 3.5/4.0"
+//   }
+// ];
 const Resume = () => {
   
   return (
