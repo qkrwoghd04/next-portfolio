@@ -49,9 +49,9 @@ const Profile = () => {
 
   return (
     <section className='absolute top-0 w-screen h-screen flex justify-center items-center'>
-      <div className='w-screen h-screen flex flex-col items-center justify-center 2xl:flex-row'>
+      <div className='w-screen h-screen flex flex-col items-center justify-center 2xl:flex-row lg:flex-row'>
         {/* Photo with Info */}
-        <div className='relative flex-1 w-full 2xl:h-2/3 p-4 flex justify-center items-center bg-black/40'>
+        <div className='relative flex-1 w-full lg:h-2/3 2xl:h-2/3 p-4 flex justify-center items-center bg-black/40'>
           <Image
             src="/assets/images/profile.jpg"
             quality={75}
@@ -70,9 +70,9 @@ const Profile = () => {
         </div>
 
         {/* Objective */}
-        <div className='flex-1 w-full 2xl:h-2/3 bg-gray-100'>
+        <div className='flex-1 w-full lg:h-2/3 2xl:h-2/3 bg-gray-100'>
           <div className='w-full h-full flex flex-col items-center justify-center'>
-            <ul className='flex flex-col justify-start items-start 2xl:gap-y-8 mb-10'>
+            <ul className='flex flex-col justify-start items-start 2xl:gap-y-8 mb-10 lg:mb-0 2xl:mb-0'>
               {profile.info.map((item, index) => {
                 return (
                   <li key={index} className="flex gap-4">
