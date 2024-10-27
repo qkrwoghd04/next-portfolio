@@ -21,25 +21,17 @@ const Resume = () => {
 
   return (
     <>
-      <ResumeSection >
-        <div className='w-full h-[50%] flex flex-col justify-center items-center bg-[#005CFD]'>
-          <p className='text-6xl text-white font-semibold'>&#123;가치 창출&#125;</p>
-        </div>
+      <ResumeSection background='from-[#005CFD]'>
+        <p className='text-6xl text-white font-semibold'>&#123;가치 창출&#125;</p>
       </ResumeSection>
-      <ResumeSection>
-        <div className='w-full h-1/2 flex flex-col justify-center items-center bg-[#783BDD]'>
-          <p className='text-6xl text-white font-semibold'>&#123;끈기와 인내&#125;</p>
-        </div>
+      <ResumeSection background='from-[#783BDD]'>
+        <p className='text-6xl text-white font-semibold'>&#123;끈기와 인내&#125;</p>
       </ResumeSection>
-      <ResumeSection>
-        <div className='w-full h-1/2 flex flex-col justify-center items-center bg-[#E36E71]'>
-          <p className='text-6xl text-white font-semibold'>&#123;소통과 협업&#125;</p>
-        </div>
+      <ResumeSection background='from-[#E36E71]'>
+        <p className='text-6xl text-white font-semibold'>&#123;소통과 협업&#125;</p>
       </ResumeSection>
-      <ResumeSection>
-        <div className='w-full h-1/2 flex flex-col justify-center items-center bg-[#AFEBF0]'>
-          <p className='text-6xl text-white font-semibold'>&#123;넓은 시야&#125;</p>
-        </div>
+      <ResumeSection background='from-[#AFEBF0]'>
+        <p className='text-6xl text-white font-semibold'>&#123;넓은 시야&#125;</p>
       </ResumeSection>
     </>
   );
