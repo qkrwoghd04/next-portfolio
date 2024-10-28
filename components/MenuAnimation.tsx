@@ -7,8 +7,10 @@ function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
+    // 화살표 회전 애니메이션
     animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
 
+    // 드롭다운 메뉴 클립 패스 애니메이션
     animate(
       "ul",
       {
@@ -23,8 +25,9 @@ function useMenuAnimation(isOpen: boolean) {
       }
     );
 
+    // 버튼 아이템 애니메이션
     animate(
-      "li",
+      "ul button",  // li 대신 ul 내부의 button을 선택
       isOpen
         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
@@ -33,7 +36,7 @@ function useMenuAnimation(isOpen: boolean) {
         delay: isOpen ? staggerMenuItems : 0,
       }
     );
-  }, [isOpen]);
+  }, [isOpen, animate]); // animate 의존성 추가
 
   return scope;
 }

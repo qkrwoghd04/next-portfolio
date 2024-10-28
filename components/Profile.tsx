@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const profile = {
   title: "현재에 만족하지않고, \n최적의 방안을 갈구합니다",
-  description: "저는 현 상황에 안주하지 않으며,\n 새로운 배움을 통해 얻은 지식을 실천합니다",
+  description: "저는 현 상황에 안주하지 않으며,\n 지속적인 배움을 통해 실천합니다",
   info: [
     {
       fieldName: "박재홍",
