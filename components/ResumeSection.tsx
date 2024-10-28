@@ -37,8 +37,6 @@ const ResumeSection = () => {
             href="https://d3c3zgrht7r4md.cloudfront.net/"
             className="font-semibold text-l bg-gray-200 rounded-3xl p-4 2xl:text-3xl 2xl:p-8 hover:bg-blue-200"
             whileHover={{ scale: 1.2 }}
-            onHoverStart={e => { }}
-            onHoverEnd={e => { }}
           >
             RESUME
           </motion.a>
@@ -60,8 +58,6 @@ const ResumeSection = () => {
             {item.info !== "LinkedIn" ? <p className='ml-4 text-xl font-extralight lg:text-2xl 2xl:text-4xl'>{item.info}</p> : <motion.a 
               href='https://www.linkedin.com/in/jaehong-park-12328a303/'
               whileHover={{ scale: 1.2 }}
-              onHoverStart={e => { }}
-              onHoverEnd={e => { }}
               className='ml-4 text-xl font-extralight lg:text-2xl 2xl:text-4xl'
             >
               LinkedIn Link
