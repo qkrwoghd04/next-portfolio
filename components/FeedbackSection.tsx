@@ -52,9 +52,7 @@ const FeedbackSection: React.FC = () => {
         // 3초 후 모달 닫고 폼 초기화
         setTimeout(() => {
           setShowThankYou(false);
-          setSelectedJob('');
-          setCustomJob('');
-          setFeedbackText('');
+          window.location.reload();
         }, 3000);
       } else {
         console.error('Failed to submit feedback:', result.error);
