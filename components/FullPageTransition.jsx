@@ -114,7 +114,7 @@ const FullPageTransition = () => {
       {sections.map((section, index) => (
         <div
           key={index}
-          className="absolute w-full h-full transition-transform duration-1000 ease-in-out"
+          className="absolute w-full h-full transition-transform duration-1000 ease-in-out overflow-y-scroll"
           style={{
             transform: `translateY(${(index - currentSection) * 100}%)`,
             zIndex: sections.length - index

@@ -33,7 +33,7 @@ export default function Header() {
         {/* logo */}
         <Link href="/">
           <h1 className="text-2xl font-semibold">
-            JAEHONG PARK<span className="text-gray-700"> .</span>
+            {"<JaehongPark />"}
           </h1>
         </Link>
 

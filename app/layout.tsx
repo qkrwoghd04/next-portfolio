@@ -14,7 +14,7 @@ const pretendard = localFont({
 
 
 export const metadata = {
-  title: "JAEHONG PARK .",
+  title: "<JaehongPark />",
   description : "THIS IS MY STROY ARCHIVE",
 };
 
