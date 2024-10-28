@@ -1,6 +1,9 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { AiOutlineProfile } from "react-icons/ai";
+import { motion } from 'framer-motion'
 
 
 const profile = {
@@ -66,6 +69,15 @@ const Profile = () => {
             <div className='text-xl whitespace-pre-line 2xl:leading-relaxed 2xl:text-3xl font-light'>
               {profile.description}
             </div>
+            <motion.div
+              whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.1 }}
+              className='flex flex-row justify-center items-center'
+            >
+              <Link href="/resume">
+                <AiOutlineProfile size={38}/>
+              </Link>
+            </motion.div>
           </div>
         </div>
 

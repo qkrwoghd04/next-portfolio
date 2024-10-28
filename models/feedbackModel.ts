@@ -1,36 +1,25 @@
 import mongoose, { Document, Model } from "mongoose";
 
-// Defining the structure of a todo item using TypeScript interfaces
-export interface Feedback {
-  sex: string;
+export interface IFeedback {
   job: string;
-  score: Number;
-  description: string;
+  content: string;
 }
 
-export interface FeedbackDocument extends Feedback, Document {
+export interface IFeedbackDocument extends IFeedback, Document {
   createdAt: Date;
   updatedAt: Date;
+  _id: mongoose.Types.ObjectId; // _id의 타입을 명시적으로 설정
 }
 
-
-const FeedbackSchema = new mongoose.Schema<FeedbackDocument>(
+const feedbackSchema = new mongoose.Schema<IFeedbackDocument>(
   {
-    sex: {
-      required: true,
-      type: String,
-    },
     job: {
-      required: true,
       type: String,
-    },
-    score: {
       required: true,
-      type: Number,
     },
-    description: {
-      required: false,
+    content: {
       type: String,
+      required: true,
     },
   },
   {
@@ -38,8 +27,7 @@ const FeedbackSchema = new mongoose.Schema<FeedbackDocument>(
   }
 );
 
-// Creating a mongoose model for the todo document
-const Feedback: Model<FeedbackDocument> =
-  mongoose.models?.Feedback || mongoose.model("Feedback", FeedbackSchema);
+const Feedback: Model<IFeedbackDocument> =
+  mongoose.models?.Feedback || mongoose.model("Feedback", feedbackSchema);
 
 export default Feedback;

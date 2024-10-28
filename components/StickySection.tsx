@@ -7,14 +7,14 @@ const StickySection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const texts = [
-    "Proactive",
+    "Aligned",
     "Always-On",
-    "Compatible",
+    "Cooperation",
     "Future-Oriented",
   ];
 
   const contents = [
-    "회사와 저를 \n별개로 두지 않습니다 \n항상 능동적인 자세로 \n목표를 주도적으로 \n이루며 나아갑니다",
+    "회사와 저를 \n별개로 바라보지 않습니다 \n서로 같은 선상에서 \n같은 곳을 바라보고 \nwin-win 할 수 있는 \n관계가 될 수 있다 생각합니다",
     "평일과 주말의\n 경계를 두지 않습니다 \n\'불금\'과 \'월요병\' \n저와는 무관한 단어입니다",
     "동료의 일과 나의 일을 \n구분하지 않습니다 \n함께할 때 더 큰 가치를 \n만들어낼 수 있다고 믿습니다",
     "현재와 미래를\n 분리하지 않습니다 \n지금의 성장은 곧 미래를 위한 \n밑거름이라 생각합니다"

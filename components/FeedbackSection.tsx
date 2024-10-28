@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+"use client"
+
+import React, { useRef, useState } from 'react'
 import useMenuAnimation from './MenuAnimation'
 import { motion, AnimatePresence } from 'framer-motion'
 import Lottie from 'react-lottie-player'
 import feedbackAnimation from '../public/feedback_ani.json'
+import { createFeedbacks } from "@/libs/action";
 
 interface Job {
   job: string;
@@ -19,6 +22,7 @@ const jobs: Job[] = [
 ]
 
 const FeedbackSection: React.FC = () => {
+  const ref = useRef<HTMLFormElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState('');
   const [customJob, setCustomJob] = useState('');
@@ -36,27 +40,42 @@ const FeedbackSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const feedbackData = {
-      job: selectedJob === '직접입력' ? customJob : selectedJob,
-      feedback: feedbackText
-    };
-    console.log('Feedback Data:', feedbackData);
-    // MongoDB 로직 추가
+    const formData = new FormData();
+    formData.append('job', selectedJob === '직접입력' ? customJob : selectedJob);
+    formData.append('feedback', feedbackText);
     setShowThankYou(true);
-    
-    // 3초 후 모달 닫고 폼 초기화
-    setTimeout(() => {
-      setShowThankYou(false);
-      setSelectedJob('');
-      setCustomJob('');
-      setFeedbackText('');
-    }, 3000);
+    try {
+      const result = await createFeedbacks(formData);
+      
+      if (result.success) {
+        setShowThankYou(true);
+        // 3초 후 모달 닫고 폼 초기화
+        setTimeout(() => {
+          setShowThankYou(false);
+          setSelectedJob('');
+          setCustomJob('');
+          setFeedbackText('');
+        }, 3000);
+      } else {
+        console.error('Failed to submit feedback:', result.error);
+        // 에러 처리를 위한 상태 추가 필요
+      }
+    } catch (error) {
+      console.error('Error submitting feedback:', error);
+      // 에러 처리를 위한 상태 추가 필요
+    }
   };
 
   return (
     <section className='min-h-screen w-full flex flex-col justify-center items-center p-4 relative'>
       <form 
         onSubmit={handleSubmit}
+        ref={ref}
+        action={async (FormData) => {
+          ref.current?.reset();
+
+          await createFeedbacks(FormData);
+        }}
         className='w-full max-w-lg 2xl:max-w-3xl bg-white rounded-xl p-8 2xl:p-12 shadow-lg space-y-6 2xl:space-y-8'
       >
         <h1 className='text-3xl 2xl:text-5xl font-extralight text-center'>Feedback or Advice</h1>
@@ -77,7 +96,7 @@ const FeedbackSection: React.FC = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 className='bg-gray-50 font-medium border rounded-lg px-4 py-2.5 2xl:px-6 2xl:py-4 text-sm 2xl:text-lg w-full flex items-center justify-between'
               >
-                {selectedJob === '직접입력' ? (customJob || '직접 입력') : (selectedJob || '종사 분야')}
+                {selectedJob === '직접입력' ? (customJob || '직접 입력') : (selectedJob || '직종')}
                 <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
                   <svg width="15" height="15" viewBox="0 0 20 20" className="2xl:scale-125">
                     <path d="M0 7 L 20 7 L 10 16" />
@@ -112,7 +131,7 @@ const FeedbackSection: React.FC = () => {
                 type="text"
                 value={customJob}
                 onChange={(e) => setCustomJob(e.target.value)}
-                placeholder="종사 분야를 입력해주세요"
+                placeholder="직종을 입력해주세요"
                 className="w-full mt-2 p-2.5 2xl:p-4 border rounded-lg bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm 2xl:text-lg"
               />
             )}

@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { connectToMongoDB } from "@/lib/db";
+import { connectToMongoDB } from "@/libs/db";
 
 // component
 import Header from "@/components/Header"
