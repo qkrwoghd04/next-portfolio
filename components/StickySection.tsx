@@ -48,7 +48,7 @@ const StickySection = () => {
 
   return (
     <>
-    <div ref={containerRef} className="h-[400vh]">
+    <div ref={containerRef} className="h-[500vh]">
       <div className="sticky top-0 h-screen w-full -z-50 flex flex-col lg:flex-row 2xl:flex-row">
         <motion.div
           className="h-1/2 w-full flex items-center justify-center lg:h-full lg:w-1/2"
