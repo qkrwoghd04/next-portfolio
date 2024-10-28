@@ -24,18 +24,20 @@ const ResumeSection = () => {
   }, [isInView])
   return (
     <div ref={ref} className='relative w-full h-[100vh] flex flex-col overflow-hidden lg:flex-row 2xl:flex-row justify-center items-center overflow-none'>
-      <div className='w-full h-1/2 flex flex-col justify-center items-center px-8 pt-15 lg:pt-0 lg:w-1/2 lg:h-[85%] 2xl:w-1/2 2xl:h-full'
+      <div className='w-full h-1/2 flex flex-col justify-center items-center px-8 pt-12 lg:pt-0 lg:w-1/2 lg:h-[85%] 2xl:w-1/2 2xl:h-full'
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
           transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
         <p className='text-3xl text-center leading-normal 2xl:text-6xl 2xl:leading-snug'>더 나은 성장을 위해 <br /> 새로운 가치를 찾아 <br /> 멈추지 않고 앞으로 <br />나아가겠습니다</p>
-        <div className='w-36 h-36 pt-8 flex flex-col justify-center items-center 2xl:w-64 2xl:h-64'>
-          <Lottie loop animationData={ResumeJson} play />
+        <div className='flex flex-col justify-center items-center 2xl:w-64 2xl:h-64'>
+          <div className='w-36 h-36'>
+            <Lottie loop animationData={ResumeJson} play />
+          </div>
           <motion.a
             href="https://d3c3zgrht7r4md.cloudfront.net/"
-            className="font-semibold text-l bg-gray-200 rounded-3xl p-4 2xl:text-3xl 2xl:p-8 hover:bg-blue-200"
+            className="font-semibold text-l bg-gray-200 rounded-2xl p-4 2xl:text-3xl 2xl:p-8 hover:bg-blue-200"
             whileHover={{ scale: 1.2 }}
           >
             RESUME
@@ -44,7 +46,7 @@ const ResumeSection = () => {
 
       </div>
       <div className='w-full h-1/2 flex justify-center items-center p-12 lg:w-1/2 lg:h-[80%] 2xl:w-1/2 2xl:h-2/3'>
-        <motion.div className='w-full h-full flex flex-col justify-between bg-black rounded-xl px-8 py-8 lg:justify-center'
+        <motion.div className='w-full h-full flex flex-col justify-between bg-black rounded-xl px-8 py-8 lg:justify-center 2xl:pl-12'
           style={{
             transform : isInView ? "none" : "translateX(200px)",
             opacity : isInView ? 1 : 0,
