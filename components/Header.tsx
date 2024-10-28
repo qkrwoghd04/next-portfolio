@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link"
-import { Button } from "./ui/button"
 import { useState, useEffect } from "react";
 
 //components
@@ -40,9 +39,6 @@ export default function Header() {
         {/* desktop nav WITH hiring me button*/}
         <div className="hidden lg:flex items-center gap-8">
           <Nav />
-          <Link href="/contact">
-            <Button>Hire me</Button>
-          </Link>
         </div>
 
         {/*  moblie nav */}

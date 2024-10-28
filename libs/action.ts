@@ -2,10 +2,11 @@
 
 import Feedback, { IFeedbackDocument } from "@/models/feedbackModel"; // IFeedbackDocument 가져오기
 import { revalidatePath } from "next/cache";
-import { connectToMongoDB } from "./db";
+import { connectToMongoDB } from "./db"; // connectToMongoDB 가져오기
 
 export const createFeedbacks = async (formData: FormData) => {
     try {
+        // MongoDB 연결
         await connectToMongoDB();
 
         const job = formData.get("job") as string;
