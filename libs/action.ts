@@ -7,9 +7,12 @@ import { connectToMongoDB } from "./db";
 export const createFeedbacks = async (formData: FormData) => {
     try {
         await connectToMongoDB();
-        
+
         const job = formData.get("job") as string;
         const content = formData.get("feedback") as string;
+
+        console.log("Job:", job);
+        console.log("Content:", content);
 
         // 입력 검증
         if (!job || !content) {
