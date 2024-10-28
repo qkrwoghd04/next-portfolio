@@ -23,8 +23,8 @@ const ResumeSection = () => {
     console.log("Element is in view: ", isInView)
   }, [isInView])
   return (
-    <div ref={ref} className='relative w-full h-[100vh] flex flex-col overflow-hidden lg:flex-row 2xl:flex-row justify-center items-center'>
-      <div className='w-full h-1/2 flex flex-col justify-center items-center p-8 pt-20 lg:pt-0 lg:w-1/2 lg:h-[85%] 2xl:w-1/2 2xl:h-full'
+    <div ref={ref} className='relative w-full h-[100vh] flex flex-col overflow-hidden lg:flex-row 2xl:flex-row justify-center items-center overflow-none'>
+      <div className='w-full h-1/2 flex flex-col justify-center items-center px-8 pt-15 lg:pt-0 lg:w-1/2 lg:h-[85%] 2xl:w-1/2 2xl:h-full'
         style={{
           transform: isInView ? "none" : "translateX(-200px)",
           opacity: isInView ? 1 : 0,
@@ -43,8 +43,8 @@ const ResumeSection = () => {
         </div>
 
       </div>
-      <div className='w-full h-1/2 flex justify-center items-center p-8 lg:w-1/2 lg:h-[80%] 2xl:w-1/2 2xl:h-2/3'>
-        <motion.div className='w-full h-full flex flex-col justify-between bg-black rounded-xl px-8 py-12 lg:justify-center'
+      <div className='w-full h-1/2 flex justify-center items-center p-12 lg:w-1/2 lg:h-[80%] 2xl:w-1/2 2xl:h-2/3'>
+        <motion.div className='w-full h-full flex flex-col justify-between bg-black rounded-xl px-8 py-8 lg:justify-center'
           style={{
             transform : isInView ? "none" : "translateX(200px)",
             opacity : isInView ? 1 : 0,
