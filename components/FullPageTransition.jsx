@@ -7,8 +7,6 @@ import Profile from './Profile'
 import Hero from './Hero';
 import Feedback from './FeedbackSection';
 
-
-
 const sections = [
   { title: 'Section 1', script: <Hero /> },
   { title: 'Section 2', script: <Profile /> },

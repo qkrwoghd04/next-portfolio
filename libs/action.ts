@@ -1,19 +1,15 @@
 'use server';
 
-import Feedback, { IFeedbackDocument } from "@/models/feedbackModel"; // IFeedbackDocument 가져오기
+import Feedback, { IFeedbackDocument } from "@/models/feedbackModel"; 
 import { revalidatePath } from "next/cache";
-import { connectToMongoDB } from "./db"; // connectToMongoDB 가져오기
+import { connectToMongoDB } from "./db"; 
 
 export const createFeedbacks = async (formData: FormData) => {
     try {
-        // MongoDB 연결
         await connectToMongoDB();
 
         const job = formData.get("job") as string;
         const content = formData.get("feedback") as string;
-
-        console.log("Job:", job);
-        console.log("Content:", content);
 
         // 입력 검증
         if (!job || !content) {
@@ -27,13 +23,7 @@ export const createFeedbacks = async (formData: FormData) => {
         });
 
         // 피드백을 데이터베이스에 저장
-        await newFeedback.save();
-
-        // Mongoose 문서를 평범한 객체로 변환
-        const feedbackData = newFeedback.toObject(); // toObject()로 변환
-
-        // _id를 문자열로 변환
-        feedbackData._id = feedbackData._id.toString(); // _id를 문자열로 변환
+        const feedbackData = await newFeedback.save();
 
         // 재검증 후 경로 업데이트
         revalidatePath("/");

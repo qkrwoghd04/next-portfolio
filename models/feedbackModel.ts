@@ -1,4 +1,5 @@
-import mongoose, { Document, Model } from "mongoose";
+"use server"
+import {Schema, Document, Model, Types, model, models } from "mongoose";
 
 export interface IFeedback {
   job: string;
@@ -8,10 +9,9 @@ export interface IFeedback {
 export interface IFeedbackDocument extends IFeedback, Document {
   createdAt: Date;
   updatedAt: Date;
-  _id: mongoose.Types.ObjectId; // _id의 타입을 명시적으로 설정
 }
 
-const feedbackSchema = new mongoose.Schema<IFeedbackDocument>(
+const feedbackSchema = new Schema<IFeedbackDocument>(
   {
     job: {
       type: String,
@@ -27,7 +27,7 @@ const feedbackSchema = new mongoose.Schema<IFeedbackDocument>(
   }
 );
 
-const Feedback: Model<IFeedbackDocument> =
-  mongoose.models?.Feedback || mongoose.model("Feedback", feedbackSchema);
+const Feedback: Model<IFeedbackDocument> = 
+  models?.Feedback || model("Feedback", feedbackSchema);
 
 export default Feedback;

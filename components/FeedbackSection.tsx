@@ -53,7 +53,7 @@ const FeedbackSection: React.FC = () => {
         setTimeout(() => {
           setShowThankYou(false);
           window.location.reload();
-        }, 3000);
+        }, 2000);
       } else {
         console.error('Failed to submit feedback:', result.error);
         // 에러 처리를 위한 상태 추가 필요
