@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { AiOutlineProfile } from "react-icons/ai";
 import { motion } from 'framer-motion'
 
