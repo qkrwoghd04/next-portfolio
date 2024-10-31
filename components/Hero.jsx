@@ -1,14 +1,16 @@
 "use client"
+
 import React, { useEffect } from 'react';
 import Image from 'next/image'
-import BackgroundImg from '../public/assets/images/background.jpg'
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import SplitType from 'split-type';
 
+// images
+import BackgroundImg from '@/public/assets/images/background.webp'
+
 function Hero() {
   useEffect(() => {
-    // CONSTANT CHALLENGE 애니메이션만 구현
     const text = new SplitType('.title');
     const chars = text.chars;
 
@@ -29,7 +31,7 @@ function Hero() {
           each: 0.06,
           from: 'center',
         },
-        duration: 1
+        duration: 0.8
       }
     );
 
@@ -44,7 +46,7 @@ function Hero() {
       <Image
         src={BackgroundImg}
         placeholder="blur"
-        quality={100}
+        quality={98}
         fill
         priority
         sizes="100vw"
@@ -53,8 +55,8 @@ function Hero() {
       />
       <div className='relative px-8 py-10 z-20'>
         <h2 className='content_title text-5xl 2xl:text-[6vw] leading-[0.8] text-center grid gap-8'>
-          <span className='uppercase title font-extralight'>constant</span>
-          <span className='uppercase title font-extralight'>challenge</span>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='uppercase title font-extralight'>constant</motion.span>
+          <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}  className='uppercase title font-extralight'>challenge</motion.span>
         </h2>
       </div>
 
@@ -62,7 +64,7 @@ function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }} // CONSTANT CHALLENGE 애니메이션 이후에 나타나도록 delay 증가
+          transition={{ duration: 1, delay: 0.5 }} 
           className="text-center max-w-[580px] mx-auto my-4 text-white/80 text-[20px] lg:text-[20px] 2xl:text-3xl leading-normal 2xl:leading-relaxed font-thin"
         >
           <b className='font-medium text-white text-[30px] 2xl:text-[50px] font-pretendard'>끊임없는 도전</b> <br /><br />

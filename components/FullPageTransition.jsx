@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-
 //Components
 import Profile from './Profile'
 import Hero from './Hero';

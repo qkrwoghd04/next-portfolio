@@ -55,8 +55,8 @@ const Profile = () => {
         {/* Photo with Info */}
         <div className='relative flex-1 w-full lg:h-2/3 2xl:h-2/3 p-4 flex justify-center items-center bg-black/40'>
           <Image
-            src="/assets/images/profile.jpg"
-            quality={75}
+            src="/assets/images/profile.webp"
+            quality={98}
             fill
             className='object-cover rounded-md object-[80%] opacity-30'
             alt="Profile"
