@@ -23,6 +23,10 @@
   }
 }
 
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 .text-accent {
   @apply text-[#ACA7A6];
 }

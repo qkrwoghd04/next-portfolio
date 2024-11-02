@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { lazy, Suspense } from 'react';
 
 // Lazy load components
@@ -28,9 +28,37 @@ const FullPageTransition = () => {
   const scrollThreshold = useRef(50);
   const scrollAccumulator = useRef(0);
   
+  useEffect(() => {
+    const preventDefault = (e) => {
+      e.preventDefault();
+    };
+
+    // 터치무브 이벤트 방지
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    document.body.style.height = '100%';
+    document.body.style.top = '0';
+    document.body.style.left = '0';
+    
+    // 모바일 Safari에서 스크롤 방지
+    document.addEventListener('touchmove', preventDefault, { passive: false });
+    
+    return () => {
+      // 컴포넌트 언마운트시 원복
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.removeEventListener('touchmove', preventDefault);
+    };
+  }, []);
   // Debounced scroll handler with accumulator
   const handleScroll = useCallback((direction) => {
     if (isScrolling) return;
+
     
     setIsScrolling(true);
     if (direction === 'down' && currentSection < sections.length - 1) {

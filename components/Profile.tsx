@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import { AiOutlineProfile } from "react-icons/ai";
 import { motion } from 'framer-motion'
 
 
@@ -73,9 +72,8 @@ const Profile = () => {
               whileHover={{ scale: 1.1 }}
               className='flex flex-row justify-center items-center'
             >
-              <a href="https://park-jaehong-resume-bucket.s3.ap-northeast-2.amazonaws.com/resume.pdf" className='flex flex-row justify-center items-center'>
+              <a href="https://park-jaehong-resume-bucket.s3.ap-northeast-2.amazonaws.com/resume.pdf">
                 <p>CV DOWNLOAD</p>
-                <AiOutlineProfile size={38}/>
               </a>
             </motion.div>
           </div>
