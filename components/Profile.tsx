@@ -73,7 +73,8 @@ const Profile = () => {
               whileHover={{ scale: 1.1 }}
               className='flex flex-row justify-center items-center'
             >
-              <a href="https://park-jaehong-resume-bucket.s3.ap-northeast-2.amazonaws.com/resume.pdf">
+              <a href="https://park-jaehong-resume-bucket.s3.ap-northeast-2.amazonaws.com/resume.pdf" className='flex flex-row justify-center items-center'>
+                <p>CV DOWNLOAD</p>
                 <AiOutlineProfile size={38}/>
               </a>
             </motion.div>
