@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { lazy, Suspense } from 'react';
 
+// Lazy load components
 const Hero = lazy(() => import('./Hero'));
 const Profile = lazy(() => import('./Profile'));
 const Feedback = lazy(() => import('./FeedbackSection'));
@@ -27,7 +28,6 @@ const FullPageTransition = () => {
   const scrollThreshold = useRef(50);
   const scrollAccumulator = useRef(0);
   
-  // iOS Safari 스크롤 방지를 위한 useEffect
   useEffect(() => {
     const preventDefault = (e) => {
       e.preventDefault();
@@ -55,10 +55,10 @@ const FullPageTransition = () => {
       document.removeEventListener('touchmove', preventDefault);
     };
   }, []);
-
   // Debounced scroll handler with accumulator
   const handleScroll = useCallback((direction) => {
     if (isScrolling) return;
+
     
     setIsScrolling(true);
     if (direction === 'down' && currentSection < sections.length - 1) {
@@ -67,6 +67,7 @@ const FullPageTransition = () => {
       setCurrentSection(prev => prev - 1);
     }
 
+    // Reset accumulator
     scrollAccumulator.current = 0;
 
     if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
@@ -102,11 +103,7 @@ const FullPageTransition = () => {
 
   return (
     <div 
-      className="fixed inset-0 w-full h-full overflow-hidden touch-none"
-      style={{
-        WebkitOverflowScrolling: 'touch',
-        overscrollBehavior: 'none',
-      }}
+      className="h-screen w-full overflow-hidden fixed"
       onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -116,13 +113,12 @@ const FullPageTransition = () => {
         return (
           <div
             key={index}
-            className="absolute w-full h-full transition-transform duration-1000 ease-in-out will-change-transform overscroll-none"
+            className="absolute w-full h-full transition-transform duration-1000 ease-in-out will-change-transform"
             style={{
               transform: `translateY(${(index - currentSection) * 100}%)`,
               zIndex: sections.length - index,
-              visibility: Math.abs(index - currentSection) > 1 ? 'hidden' : 'visible',
-              WebkitOverflowScrolling: 'touch',
-              overscrollBehavior: 'none'
+              // Only render sections that are currently visible or adjacent
+              visibility: Math.abs(index - currentSection) > 1 ? 'hidden' : 'visible'
             }}
           >
             <Suspense fallback={<LoadingFallback />}>
